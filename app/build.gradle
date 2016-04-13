@@ -19,7 +19,7 @@ android {
     }
 
     productFlavors {
-        oss {
+        nonFree {
             applicationId "shine.tran.tubeview"
             versionName "1.2.4 Free"
             resValue "string", "app_name", "Tube View"

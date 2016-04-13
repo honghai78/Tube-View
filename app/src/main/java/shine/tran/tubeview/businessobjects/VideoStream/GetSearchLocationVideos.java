@@ -37,10 +37,10 @@ public class GetSearchLocationVideos extends GetYouTubeVideoBySearch{
                     MainActivity.setInfoLocation(MainActivity.ACTIVITY);
                     videosList.setLocation(MainActivity.LATITUDE + "," + MainActivity.LONGITUDE);
                     videosList.setLocationRadius(MainActivity.RADIUS+"km");
-                    if(MainActivity.COUNTRY_NAME.length()>0) Toast.makeText(MainActivity.ACTIVITY, "Search in mLocation:\n" + MainActivity.COUNTRY_NAME+"\nRadius: "+MainActivity.RADIUS+"km", Toast.LENGTH_LONG).show();
+                    if(MainActivity.COUNTRY_NAME.length()>0) Toast.makeText(MainActivity.ACTIVITY, "Search in Location:\n" + MainActivity.COUNTRY_NAME+"\nRadius: "+MainActivity.RADIUS+"km", Toast.LENGTH_LONG).show();
                     else
                     {
-                        Toast.makeText(MainActivity.ACTIVITY, "Sorry! Your mLocation is unable.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.ACTIVITY, "Sorry! Your Location is unable.", Toast.LENGTH_LONG).show();
                         MainActivity.TEST = false;
                     }
             }

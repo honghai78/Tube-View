@@ -83,7 +83,7 @@ public class PreferencesFragment extends PreferenceFragment {
                             if (countryName != null)
                                 Toast.makeText(getActivity().getApplicationContext(), "Your Location is:\n" + countryName, Toast.LENGTH_LONG).show();
                             else
-                                Toast.makeText(getActivity().getApplicationContext(), "Unable to determine your mLocation", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getActivity().getApplicationContext(), "Unable to determine your Location", Toast.LENGTH_LONG).show();
                         } else {
                             // can't get mLocation
                             // GPS or Network is not enabled

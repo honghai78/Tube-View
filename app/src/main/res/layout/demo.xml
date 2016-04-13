@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <PreferenceCategory
+        android:key="@string/pref_key_search"
+        android:title="@string/pref_search_category">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_use_location"
+            android:summary="@string/pref_summary_use_location"
+            android:title="@string/pref_title_use_location" />
+        <shine.tran.tubeview.gui.businessobjects.EditTextPreferenceEx
+            android:defaultValue="1000"
+            android:inputType="number"
+            android:key="@string/pref_key_use_radius"
+            android:summary="@string/pref_summary_use_radius"
+            android:title="@string/pref_title_use_radius" />
+    </PreferenceCategory>
+</RelativeLayout>

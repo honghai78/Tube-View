@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:custom="http://schemas.android.com/apk/res-auto"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent">
+
+	<RelativeLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<shine.tran.tubeview.gui.businessobjects.InternetImageView
+			android:id="@+id/thumbnail_image_view"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:scaleType="fitXY"
+			android:adjustViewBounds="true"
+			android:src="@drawable/thumbnail_default"
+			custom:defaultImage="@drawable/thumbnail_default"
+			android:foreground="?android:attr/selectableItemBackground"/> <!-- on click, background effect -->
+
+		<TextView
+			android:id="@+id/title_text_view"
+			style="@style/GridTextView"
+			android:padding="10dp"
+			android:minLines="1"
+			android:maxLines="2"
+			android:text="Title"/>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_above="@+id/channel_text_view" >
+			<TextView
+				android:id="@+id/thumbs_up_text_view"
+				style="@style/GridMicroDetailsTextView"
+				android:drawableLeft="@drawable/ic_thumb_up_white"
+				android:drawablePadding="5dp"
+				android:text="97%"/>
+			<TextView
+				android:id="@+id/video_duration_text_view"
+				style="@style/GridMicroDetailsTextView"
+				android:layout_alignParentRight="true"
+				android:text="19:17"/>
+		</RelativeLayout>
+
+		<TextView
+			android:id="@id/channel_text_view"
+			style="@style/GridDetailsTextView"
+			android:padding="10dp"
+			android:layout_alignBottom="@id/thumbnail_image_view"
+			android:text="Channel"
+			android:background="@color/video_cell_background"
+			android:foreground="?android:attr/selectableItemBackground"/> <!-- on click, background effect -->
+	</RelativeLayout>
+
+
+	<RelativeLayout
+		android:id="@+id/cell_bottom_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:paddingBottom="10dp"
+		android:layout_marginTop="-10dp"
+		android:background="@color/video_cell_background">
+
+		<TextView
+			android:id="@+id/views_text_view"
+			android:layout_width="wrap_content"
+			style="@style/GridDetailsTextView"
+			android:text="199 Views"/>
+
+		<TextView
+			android:id="@+id/separator_text_view"
+			android:layout_width="wrap_content"
+			android:layout_toRightOf="@id/views_text_view"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+			style="@style/GridDetailsTextView"
+			android:text="|"/>
+
+		<TextView
+			android:id="@+id/publish_date_text_view"
+			android:layout_width="wrap_content"
+			android:layout_toRightOf="@id/separator_text_view"
+			style="@style/GridDetailsTextView"
+			android:text="x days ago"/>
+
+	</RelativeLayout>
+
+</LinearLayout>

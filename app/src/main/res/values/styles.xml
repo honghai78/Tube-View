@@ -1,0 +1,127 @@
+<resources>
+	
+	<!-- Tube View theme -->
+	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+
+		<item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat</item>
+	</style>
+
+
+	<!-- *************************************************************************************** -->
+	<!--
+		Main Activity
+	-->
+
+	<style name="NoActionBarActivityTheme" parent="AppTheme">
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+	</style>
+
+
+	<!-- *************************************************************************************** -->
+	<!--
+		Video Grid
+	-->
+
+	<style name="GridTextView" parent="AppTheme">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+		<item name="android:textColor">@color/video_cell_text_main</item>
+		<item name="android:background">@color/video_cell_background</item>
+	</style>
+
+	<style name="GridMicroDetailsTextView" parent="GridTextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:padding">2dp</item>
+		<item name="android:background">#BA111517</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+	</style>
+
+	<style name="GridDetailsTextView" parent="GridTextView">
+		<item name="android:textColor">@color/video_cell_text_details</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+	</style>
+
+
+	<!-- *************************************************************************************** -->
+	<!--
+		Subs Drawer
+	-->
+
+	<style name="SubsTextView" parent="AppTheme">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/subs_text</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+	</style>
+
+	<style name="SubscribeButton" parent="AppTheme">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/subs_text</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+		<item name="android:minHeight">0dp</item>
+		<item name="android:minWidth">0dp</item>
+		<item name="android:padding">3dp</item>
+		<item name="android:background">@drawable/subscribe_button_background</item>
+		<item name="android:text">@string/subscribe</item>
+	</style>
+
+
+
+	<!-- *************************************************************************************** -->
+	<!--
+	 	Video Player
+	-->
+
+	<style name="VideoPlayerActivityTheme" parent="AppTheme">
+		<item name="android:windowFullscreen">true</item>
+		<item name="windowActionBarOverlay">true</item>
+		<item name="actionBarStyle">@style/VideoPlayerActionBarTheme</item>
+	</style>
+
+	<style name="VideoPlayerActionBarTheme" parent="AppTheme" >
+		<item name="background">@color/video_player_hud</item>	<!-- Actionbar background colour -->
+		<item name="displayOptions">showHome|homeAsUp|showTitle|useLogo|showCustom</item>
+	</style>
+
+	<!-- Video Description -->
+	<style name="VideoDescTextView" parent="AppTheme">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/video_player_drawer_text</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+	</style>
+
+	<!-- Comments -->
+	<style name="CommentTextView" parent="AppTheme">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/comment_text</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+	</style>
+	
+	<style name="CommentInfoTextView" parent="CommentTextView">
+		<item name="android:textSize">12sp</item>
+	</style>
+
+
+	<!-- *************************************************************************************** -->
+	<!--
+	 	Channel Browser
+	-->
+
+	<style name="ChannelDetailsTextView" parent="AppTheme">
+		<item name="android:textColor">#F5F5F5FF</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+	</style>
+
+
+</resources>

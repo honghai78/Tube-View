@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="@string/pref_key_search"
+        android:title="@string/pref_search_category">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_use_location"
+            android:summary="@string/pref_summary_use_location"
+            android:title="@string/pref_title_use_location" />
+        <shine.tran.tubeview.gui.businessobjects.EditTextPreferenceEx
+            android:defaultValue="1000"
+            android:inputType="number"
+            android:key="@string/pref_key_use_radius"
+            android:summary="@string/pref_summary_use_radius"
+            android:title="@string/pref_title_use_radius" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="pref_key_languages"
+        android:title="@string/pref_languages_category">
+        <ListPreference
+            android:defaultValue="@string/auto_conutry"
+            android:entries="@array/country_names"
+            android:entryValues="@array/country_codes"
+            android:key="@string/pref_key_preferred_region"
+            android:summary="@string/pref_summary_preferred_regions"
+            android:title="@string/pref_title_preferred_regions" />
+
+        <MultiSelectListPreference
+            android:defaultValue="@array/default_language"
+            android:entries="@array/languages_names"
+            android:entryValues="@array/languages_codes"
+            android:key="@string/pref_key_preferred_languages"
+            android:summary="@string/pref_summary_preferred_languages"
+            android:title="@string/pref_title_preferred_languages" />
+    </PreferenceCategory>
+
+    <!--
+        Video Player Category
+     -->
+    <PreferenceCategory
+        android:key="@string/pref_key_video_player_category"
+        android:title="@string/pref_video_player_category">
+        <ListPreference
+            android:key="@string/pref_key_preferred_res"
+            android:summary="@string/pref_summary_preferred_res"
+            android:title="@string/pref_title_preferred_res"
+            />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/pref_key_use_offical_player"
+            android:summary="@string/pref_summary_use_offical_player"
+            android:title="@string/pref_title_use_offical_player" />
+    </PreferenceCategory>
+
+    <!--
+        About Category
+     -->
+    <PreferenceCategory android:title="@string/pref_about_category">
+        <PreferenceScreen
+            android:key="@string/pref_key_author"
+            android:summary="@string/pref_summary_author"
+            android:title="@string/pref_title_author" />
+        <PreferenceScreen
+            android:key="@string/pref_key_license"
+            android:summary="@string/pref_summary_license"
+            android:title="@string/pref_title_license" />
+        <PreferenceScreen
+            android:key="@string/pref_key_version"
+            android:title="@string/pref_title_version" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

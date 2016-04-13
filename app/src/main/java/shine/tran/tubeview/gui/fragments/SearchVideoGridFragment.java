@@ -13,14 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
-import android.widget.Toast;
 
 import shine.tran.tubeview.R;
 import shine.tran.tubeview.businessobjects.VideoCategory;
 import shine.tran.tubeview.gui.activities.MainActivity;
-import shine.tran.tubeview.gui.activities.PreferencesActivity;
-import shine.tran.tubeview.gui.activities.SearchActivity;
-import shine.tran.tubeview.gui.app.TubeViewApp;
 import shine.tran.tubeview.gui.businessobjects.FragmentEx;
 import shine.tran.tubeview.gui.businessobjects.VideoGridAdapter;
 
@@ -29,8 +25,8 @@ import shine.tran.tubeview.gui.businessobjects.VideoGridAdapter;
  */
 public class SearchVideoGridFragment extends FragmentEx {
 
-    public static GridView gridView;
-    protected VideoGridAdapter videoGridAdapter;
+    public static GridView mGridView;
+    protected VideoGridAdapter mVideoGridAdapter;
 
 
     @Override
@@ -38,19 +34,19 @@ public class SearchVideoGridFragment extends FragmentEx {
         // inflate the layout for this fragment
         View view = inflater.inflate(R.layout.videos_gridview, container, false);
 
-        this.gridView = (GridView) view.findViewById(R.id.grid_view);
+        this.mGridView = (GridView) view.findViewById(R.id.grid_view);
 
-        if (videoGridAdapter == null) {
-            this.videoGridAdapter = new VideoGridAdapter(getActivity());
+        if (mVideoGridAdapter == null) {
+            this.mVideoGridAdapter = new VideoGridAdapter(getActivity());
 
             String searchQuery = getSearchQuery();
             if (searchQuery != null) {
                 // set the video category (if the user wants to search)... otherwise it will be set-
                 // up by the VideoGridFragment
                 if (MainActivity.TEST && MainActivity.COUNTRY_NAME != null) {
-                    this.videoGridAdapter.setVideoCategory(VideoCategory.SEARCH_QUERY_LOCATION, searchQuery);
+                    this.mVideoGridAdapter.setVideoCategory(VideoCategory.SEARCH_QUERY_LOCATION, searchQuery);
                 } else
-                    this.videoGridAdapter.setVideoCategory(VideoCategory.SEARCH_QUERY, searchQuery);
+                    this.mVideoGridAdapter.setVideoCategory(VideoCategory.SEARCH_QUERY, searchQuery);
 
                 // set the action bar's title
                 ActionBar actionBar = getSupportActionBar();
@@ -59,7 +55,7 @@ public class SearchVideoGridFragment extends FragmentEx {
             }
         }
 
-        this.gridView.setAdapter(this.videoGridAdapter);
+        this.mGridView.setAdapter(this.mVideoGridAdapter);
 
         return view;
     }

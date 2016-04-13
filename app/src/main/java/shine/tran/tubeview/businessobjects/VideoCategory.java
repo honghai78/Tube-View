@@ -30,7 +30,7 @@ public enum VideoCategory {
     CHANNEL_VIDEOS(3),
 
     /**
-     * Videos related to a search query by location
+     * Videos related to a search query by mLocation
      */
     SEARCH_QUERY_LOCATION(4);
 

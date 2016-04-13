@@ -1,16 +1,13 @@
 package shine.tran.tubeview.gui.activities;
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,17 +17,12 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.telephony.TelephonyManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import java.io.IOException;
-
 import shine.tran.tubeview.R;
-import shine.tran.tubeview.businessobjects.VideoCategory;
-import shine.tran.tubeview.businessobjects.YouTubeChannel;
 import shine.tran.tubeview.gui.app.TubeViewApp;
 import shine.tran.tubeview.gui.businessobjects.GPSTrack;
 import shine.tran.tubeview.gui.fragments.PreferencesFragment;
@@ -81,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         if (COUNTRY_CODE_VALUE == null) {
             TelephonyManager tm = (TelephonyManager) MainActivity.this.getSystemService(MainActivity.this.TELEPHONY_SERVICE);
             String country = tm.getNetworkCountryIso();
-            //if phone no SIM then get country from location phone
+            //if phone no SIM then get country from mLocation phone
             if (country == null || country.length() < 2) {
                 country = getResources().getConfiguration().locale.getCountry();
             }
@@ -93,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         {
             TelephonyManager tm = (TelephonyManager) MainActivity.this.getSystemService(MainActivity.this.TELEPHONY_SERVICE);
             String country = tm.getNetworkCountryIso();
-            //if phone no SIM then get country from location phone
+            //if phone no SIM then get country from mLocation phone
             if (country == null || country.length() < 2) {
                 country = getResources().getConfiguration().locale.getCountry();
             }
@@ -150,9 +142,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.menu_reload_list:
                 showRegion();
-                VideosGridFragment.gridView.setSelection(0);
-                VideosGridFragment.videoGridAdapter.setVideoCategory(VideosGridFragment.videoCategory);
-                VideosGridFragment.videoGridAdapter.reLoad();
+                VideosGridFragment.mGridView.setSelection(0);
+                VideosGridFragment.mVideoGridAdapter.setVideoCategory(VideosGridFragment.mVideoCategory);
+                VideosGridFragment.mVideoGridAdapter.reLoad();
                 return true;
         }
 
@@ -165,9 +157,9 @@ public class MainActivity extends AppCompatActivity {
         if (PreferencesFragment.RE_LOAD) {
             PreferencesFragment.RE_LOAD = false;
             showRegion();
-            VideosGridFragment.gridView.setSelection(0);
-            VideosGridFragment.videoGridAdapter.setVideoCategory(VideosGridFragment.videoCategory);
-            VideosGridFragment.videoGridAdapter.reLoad();
+            VideosGridFragment.mGridView.setSelection(0);
+            VideosGridFragment.mVideoGridAdapter.setVideoCategory(VideosGridFragment.mVideoCategory);
+            VideosGridFragment.mVideoGridAdapter.reLoad();
         }
         super.onPostResume();
     }

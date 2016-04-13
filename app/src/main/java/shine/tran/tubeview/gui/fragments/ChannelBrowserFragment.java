@@ -23,19 +23,19 @@ import shine.tran.tubeview.gui.businessobjects.SubscribeButton;
 import shine.tran.tubeview.gui.businessobjects.VideoGridAdapter;
 
 /**
- * A Fragment that displays information about a channel.
+ * A Fragment that displays information about a mChannel.
  */
 public class ChannelBrowserFragment extends FragmentEx {
 
-	private YouTubeChannel	channel = null;
-	private GridView		gridView;
-	private VideoGridAdapter videoGridAdapter;
+	private YouTubeChannel mChannel = null;
+	private GridView       mGridView;
+	private VideoGridAdapter mVideoGridAdapter;
 
-	private InternetImageView	channelThumbnailImage = null;
-	private InternetImageView	channelBannerImage = null;
-	private TextView			channelSubscribersTextView = null;
-	private SubscribeButton		channelSubscribeButton = null;
-	private GetChannelInfoTask	task = null;
+	private InternetImageView mChannelThumbnailImage = null;
+	private InternetImageView mChannelBannerImage = null;
+	private TextView          mChannelSubscribersTextView = null;
+	private SubscribeButton   mChannelSubscribeButton = null;
+	private GetChannelInfoTask mTask = null;
 
 	private static final String TAG = ChannelBrowserActivity.class.getSimpleName();
 
@@ -47,11 +47,11 @@ public class ChannelBrowserFragment extends FragmentEx {
 
 		// we need to create a YouTubeChannel object:  this can be done by either:
 		//   (1) the object is passed to this Fragment
-		//   (2) passing the channel ID... a task is then created to create a YouTubeChannel
-		//       instance using the given channel ID
+		//   (2) passing the mChannel ID... a mTask is then created to create a YouTubeChannel
+		//       instance using the given mChannel ID
 		if (bundle != null  &&  bundle.getSerializable(ChannelBrowserActivity.CHANNEL_OBJ) != null) {
-			this.channel = (YouTubeChannel) bundle.getSerializable(ChannelBrowserActivity.CHANNEL_OBJ);
-			channelId = channel.getId();
+			this.mChannel = (YouTubeChannel) bundle.getSerializable(ChannelBrowserActivity.CHANNEL_OBJ);
+			channelId = mChannel.getId();
 		} else {
 			channelId = getActivity().getIntent().getStringExtra(ChannelBrowserActivity.CHANNEL_ID);
 		}
@@ -59,61 +59,61 @@ public class ChannelBrowserFragment extends FragmentEx {
 		// inflate the layout for this fragment
 		View fragment = inflater.inflate(R.layout.fragment_channel_browser, container, false);
 
-		channelBannerImage = (InternetImageView) fragment.findViewById(R.id.channel_banner_image_view);
-		channelThumbnailImage = (InternetImageView) fragment.findViewById(R.id.channel_thumbnail_image_view);
-		channelSubscribersTextView = (TextView) fragment.findViewById(R.id.channel_subs_text_view);
-		channelSubscribeButton = (SubscribeButton) fragment.findViewById(R.id.channel_subscribe_button);
-		channelSubscribeButton.setOnClickListener(new View.OnClickListener() {
+		mChannelBannerImage = (InternetImageView) fragment.findViewById(R.id.channel_banner_image_view);
+		mChannelThumbnailImage = (InternetImageView) fragment.findViewById(R.id.channel_thumbnail_image_view);
+		mChannelSubscribersTextView = (TextView) fragment.findViewById(R.id.channel_subs_text_view);
+		mChannelSubscribeButton = (SubscribeButton) fragment.findViewById(R.id.channel_subscribe_button);
+		mChannelSubscribeButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// subscribe / unsubscribe to this video's channel
-				new SubscribeToChannelTask(channelSubscribeButton, channel).execute();
+				// subscribe / unsubscribe to this video's mChannel
+				new SubscribeToChannelTask(mChannelSubscribeButton, mChannel).execute();
 			}
 		});
 
-		if (channel == null) {
-			if (task == null) {
-				task = new GetChannelInfoTask();
-				task.execute(channelId);
+		if (mChannel == null) {
+			if (mTask == null) {
+				mTask = new GetChannelInfoTask();
+				mTask.execute(channelId);
 			}
 		} else {
 			initViews();
-			channel.updateLastVisitTime();
+			mChannel.updateLastVisitTime();
 		}
 
-		gridView = (GridView) fragment.findViewById(R.id.grid_view);
+		mGridView = (GridView) fragment.findViewById(R.id.grid_view);
 
-		if (videoGridAdapter == null) {
-			videoGridAdapter = new VideoGridAdapter(getActivity(), false /*hide channel name*/);
-			videoGridAdapter.setVideoCategory(VideoCategory.CHANNEL_VIDEOS, channelId);
+		if (mVideoGridAdapter == null) {
+			mVideoGridAdapter = new VideoGridAdapter(getActivity(), false /*hide mChannel name*/);
+			mVideoGridAdapter.setVideoCategory(VideoCategory.CHANNEL_VIDEOS, channelId);
 		}
 
-		this.gridView.setAdapter(this.videoGridAdapter);
+		this.mGridView.setAdapter(this.mVideoGridAdapter);
 
 		return fragment;
 	}
 
 
 	/**
-	 * Initialise views that are related to {@link #channel}.
+	 * Initialise views that are related to {@link #mChannel}.
 	 */
 	private void initViews() {
-		if (channel != null) {
-			channelThumbnailImage.setImageAsync(channel.getThumbnailNormalUrl());
-			channelBannerImage.setImageAsync(channel.getBannerUrl());
-			channelSubscribersTextView.setText(channel.getTotalSubscribers());
+		if (mChannel != null) {
+			mChannelThumbnailImage.setImageAsync(mChannel.getThumbnailNormalUrl());
+			mChannelBannerImage.setImageAsync(mChannel.getBannerUrl());
+			mChannelSubscribersTextView.setText(mChannel.getTotalSubscribers());
 
 			ActionBar actionBar = getSupportActionBar();
 			if (actionBar != null) {
-				actionBar.setTitle(channel.getTitle());
+				actionBar.setTitle(mChannel.getTitle());
 			}
 
-			// if the user has subscribed to this channel, then change the state of the
+			// if the user has subscribed to this mChannel, then change the state of the
 			// subscribe button
-			if (channel.isUserSubscribed()) {
-				channelSubscribeButton.setUnsubscribeState();
+			if (mChannel.isUserSubscribed()) {
+				mChannelSubscribeButton.setUnsubscribeState();
 			} else {
-				channelSubscribeButton.setSubscribeState();
+				mChannelSubscribeButton.setSubscribeState();
 			}
 		}
 	}
@@ -130,13 +130,13 @@ public class ChannelBrowserFragment extends FragmentEx {
 			YouTubeChannel chn = new YouTubeChannel();
 
 			try {
-				// initialise the channel
+				// initialise the mChannel
 				chn.init(channelId[0]);
 
-				// the user is visiting the channel, so we need to update the last visit time
+				// the user is visiting the mChannel, so we need to update the last visit time
 				chn.updateLastVisitTime();
 			} catch (IOException e) {
-				Log.e(TAG, "Unable to get channel info.  ChannelID=" + channelId[0], e);
+				Log.e(TAG, "Unable to get mChannel info.  ChannelID=" + channelId[0], e);
 				chn = null;
 			}
 
@@ -145,7 +145,7 @@ public class ChannelBrowserFragment extends FragmentEx {
 
 		@Override
 		protected void onPostExecute(YouTubeChannel youTubeChannel) {
-			ChannelBrowserFragment.this.channel = youTubeChannel;
+			ChannelBrowserFragment.this.mChannel = youTubeChannel;
 			initViews();
 		}
 

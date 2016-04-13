@@ -1,10 +1,8 @@
 package shine.tran.tubeview.gui.fragments;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
@@ -13,7 +11,6 @@ import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.provider.Settings;
-import android.view.Window;
 import android.widget.Toast;
 
 import shine.tran.tubeview.BuildConfig;
@@ -28,11 +25,11 @@ import shine.tran.tubeview.gui.businessobjects.GPSTrack;
  */
 public class PreferencesFragment extends PreferenceFragment {
 
-    GPSTrack gps = null;
-    public static CheckBoxPreference location = null;
+    private GPSTrack mGps = null;
+    public static CheckBoxPreference mLocation = null;
     public static boolean RE_LOAD = false;
-    private String region = "";
-    private ListPreference regionPref;
+    private String mRegion = "";
+    private ListPreference mRegionPref;
     private static final String TAG = PreferencesFragment.class.getSimpleName();
 
     @Override
@@ -45,8 +42,8 @@ public class PreferencesFragment extends PreferenceFragment {
         ListPreference resolutionPref = (ListPreference) findPreference(getString(R.string.pref_key_preferred_res));
         resolutionPref.setEntries(VideoResolution.getAllVideoResolutionsNames());
         resolutionPref.setEntryValues(VideoResolution.getAllVideoResolutionsIds());
-        //Save region when setting is enable
-        regionPref = (ListPreference) findPreference(getString(R.string.pref_key_preferred_region));
+        //Save mRegion when setting is enable
+        mRegionPref = (ListPreference) findPreference(getString(R.string.pref_key_preferred_region));
         // if the user clicks on the author, then open the display the actual author
         Preference authorPref = findPreference(getString(R.string.pref_key_author));
         authorPref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -57,38 +54,38 @@ public class PreferencesFragment extends PreferenceFragment {
             }
         });
 
-        location = (CheckBoxPreference) findPreference(getString(R.string.pref_key_use_location));
+        mLocation = (CheckBoxPreference) findPreference(getString(R.string.pref_key_use_location));
 
         if (Build.VERSION.SDK_INT > 22) {
-            location.setChecked(false);
-            location.setEnabled(false);
+            mLocation.setChecked(false);
+            mLocation.setEnabled(false);
             Toast.makeText(MainActivity.ACTIVITY, "SORRY: \nThis version of the Tube View , we do not support GPS on Android 6.0 Marshmallow", Toast.LENGTH_LONG).show();
         } else {
-            location.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            mLocation.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
-                    gps = new GPSTrack(getActivity());
-                    if (location.isChecked()) {
+                    mGps = new GPSTrack(getActivity());
+                    if (mLocation.isChecked()) {
 
                         // check if GPS enabled
-                        if (gps.canGetLocation()) {
+                        if (mGps.canGetLocation()) {
 
-                            //  double latitude = gps.getLatitude();
-                            //double longitude = gps.getLongitude();
-                            location.setChecked(true);
+                            //  double latitude = mGps.getLatitude();
+                            //double longitude = mGps.getLongitude();
+                            mLocation.setChecked(true);
                             // \n is for new line
-                            String countryName = gps.getRegionName(getActivity());
+                            String countryName = mGps.getRegionName(getActivity());
                             MainActivity.COUNTRY_NAME = countryName;
-                            MainActivity.LATITUDE = gps.getLatitude();
-                            MainActivity.LONGITUDE = gps.getLongitude();
+                            MainActivity.LATITUDE = mGps.getLatitude();
+                            MainActivity.LONGITUDE = mGps.getLongitude();
                             MainActivity.TEST = true;
-                            gps.stopUsingGPS();
+                            mGps.stopUsingGPS();
                             if (countryName != null)
                                 Toast.makeText(getActivity().getApplicationContext(), "Your Location is:\n" + countryName, Toast.LENGTH_LONG).show();
                             else
-                                Toast.makeText(getActivity().getApplicationContext(), "Unable to determine your location", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getActivity().getApplicationContext(), "Unable to determine your mLocation", Toast.LENGTH_LONG).show();
                         } else {
-                            // can't get location
+                            // can't get mLocation
                             // GPS or Network is not enabled
                             // Ask user to enable GPS/network in settings
 
@@ -103,7 +100,7 @@ public class PreferencesFragment extends PreferenceFragment {
                             // On pressing Settings button
                             alertDialog.setPositiveButton("Settings", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
-                                    location.setChecked(true);
+                                    mLocation.setChecked(true);
                                     Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                                     getActivity().startActivity(intent);
                                 }
@@ -112,7 +109,7 @@ public class PreferencesFragment extends PreferenceFragment {
                             // on pressing cancel button
                             alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
-                                    location.setChecked(false);
+                                    mLocation.setChecked(false);
                                     dialog.cancel();
                                 }
                             });
@@ -124,7 +121,7 @@ public class PreferencesFragment extends PreferenceFragment {
 
                     } else {
                         MainActivity.TEST = false;
-                        gps.stopUsingGPS();
+                        mGps.stopUsingGPS();
                     }
 
                     return false;
@@ -178,17 +175,17 @@ public class PreferencesFragment extends PreferenceFragment {
 
     @Override
     public void onStart() {
-        region = regionPref.getValue();
+        mRegion = mRegionPref.getValue();
         if (Build.VERSION.SDK_INT < 23) {
-            gps = new GPSTrack(getActivity());
-            if (gps.canGetLocation()) {
+            mGps = new GPSTrack(getActivity());
+            if (mGps.canGetLocation()) {
                 Toast.makeText(getActivity(), "GPS is enabled", Toast.LENGTH_LONG).show();
                 MainActivity.TEST = true;
-                gps.stopUsingGPS();
-                //location.setChecked(true);
+                mGps.stopUsingGPS();
+                //mLocation.setChecked(true);
             } else {
                 Toast.makeText(getActivity(), "GPS is NOT enabled", Toast.LENGTH_LONG).show();
-                location.setChecked(false);
+                mLocation.setChecked(false);
                 MainActivity.TEST = false;
             }
         }
@@ -197,7 +194,7 @@ public class PreferencesFragment extends PreferenceFragment {
 
     @Override
     public void onPause() {
-        if (!regionPref.getValue().equals(region))
+        if (!mRegionPref.getValue().equals(mRegion))
             RE_LOAD = true;
         super.onPause();
     }

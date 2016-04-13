@@ -64,7 +64,7 @@ public class VideoGridAdapter extends BaseAdapterEx<YouTubeVideo> {
 	 * category asynchronously.
 	 *
 	 * @param videoCategory	The video category you want to change to.
-	 * @param searchQuery	The search query.  Should only be set if videoCategory is equal to
+	 * @param searchQuery	The search query.  Should only be set if mVideoCategory is equal to
 	 *                      SEARCH_QUERY.
 	 */
 	public void setVideoCategory(VideoCategory videoCategory, String searchQuery) {

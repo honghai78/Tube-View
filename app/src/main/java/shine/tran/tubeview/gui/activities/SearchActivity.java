@@ -1,22 +1,15 @@
 package shine.tran.tubeview.gui.activities;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import shine.tran.tubeview.R;
-import shine.tran.tubeview.gui.app.TubeViewApp;
 import shine.tran.tubeview.gui.businessobjects.BackActivity;
-import shine.tran.tubeview.gui.businessobjects.GPSTrack;
 import shine.tran.tubeview.gui.fragments.SearchVideoGridFragment;
 
 /**
@@ -75,7 +68,7 @@ public class SearchActivity extends BackActivity {
                 startActivity(i);
                 return true;
             case R.id.menu_reload_list:
-                SearchVideoGridFragment.gridView.setSelection(0);
+                SearchVideoGridFragment.mGridView.setSelection(0);
                 return true;
         }
 

@@ -72,39 +72,38 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 	private VideoView           mVideoView = null;
 	private MediaControllerEx   mMediaController = null;
 	private TextView            mVideoDescTitleTextView = null;
-	private TextView			videoDescChannelTextView = null;
-	private SubscribeButton		videoDescSubscribeButton = null;
-	private TextView			videoDescViewsTextView = null;
-	private TextView			videoDescLikesTextView = null;
-	private TextView			videoDescDislikesTextView = null;
-	private TextView			videoDescPublishDateTextView = null;
-	private TextView			videoDescriptionTextView = null;
-	private ProgressBar			videoDescLikesBar = null;
-	private View				voidView = null;
-	private View				loadingVideoView = null;
+	private TextView            mVideoDescChannelTextView = null;
+	private SubscribeButton     mVideoDescSubscribeButton = null;
+	private TextView            mVideoDescViewsTextView = null;
+	private TextView            mVideoDescLikesTextView = null;
+	private TextView            mVideoDescDislikesTextView = null;
+	private TextView            mVideoDescPublishDateTextView = null;
+	private TextView            mVideoDescriptionTextView = null;
+	private ProgressBar         mVideoDescLikesBar = null;
+	private View                mVoidView = null;
+	private View                mLoadingVideoView = null;
 
-	private SlidingDrawer		videoDescriptionDrawer = null;
-	private SlidingDrawer		commentsDrawer = null;
-	private View				commentsProgressBar = null,
-								noVideoCommentsView = null;
-	private CommentsAdapter		commentsAdapter = null;
-	private ExpandableListView	commentsExpandableListView = null;
+	private SlidingDrawer       mVideoDescriptionDrawer = null;
+	private SlidingDrawer       mCommentsDrawer = null;
+	private View                mCommentsProgressBar = null,
+								mNoVideoCommentsView = null;
+	private CommentsAdapter     mCommentsAdapter = null;
+	private ExpandableListView  mCommentsExpandableListView = null;
 
 
-	private SlidingDrawer		videoDrawer = null;
-	private View				videoProgressBar = null;
+	private SlidingDrawer       mVideoDrawer = null;
+	private View                mVideoProgressBar = null;
 
-	private GridView			gridView = null;
+	private GridView            mGridView = null;
 
-	private Handler				timerHandler = null;
+	private Handler             mTimerHandler = null;
 
-	private VideoGridAdapter     videoGridAdapter = null;
+	private VideoGridAdapter     mVideoGridAdapter = null;
 	private static final int     HUD_VISIBILITY_TIMEOUT = 7000;
     public static Activity       ACTIVITY = null;
 	private static final String  TAG = YouTubePlayerFragment.class.getSimpleName();
-	RelativeLayout layout = null;
-    int posi =0;
-    Uri uri;
+    private int posi =0;
+    private Uri uri;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -114,7 +113,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 		setHasOptionsMenu(true);
 
 		if (mYouTubeVideo == null) {
-			loadingVideoView = view.findViewById(R.id.loadingVideoView);
+			mLoadingVideoView = view.findViewById(R.id.loadingVideoView);
 
 			mVideoView = (VideoView) view.findViewById(R.id.video_view);
 			// play the video once its loaded
@@ -125,36 +124,36 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 
 			//===============================================================================
 			//Set VideosDescri
-			videoDescriptionDrawer = (SlidingDrawer) view.findViewById(R.id.des_drawer);
+			mVideoDescriptionDrawer = (SlidingDrawer) view.findViewById(R.id.des_drawer);
 			mVideoDescTitleTextView = (TextView) view.findViewById(R.id.video_desc_title);
-			videoDescChannelTextView = (TextView) view.findViewById(R.id.video_desc_channel);
-			videoDescViewsTextView = (TextView) view.findViewById(R.id.video_desc_views);
-			videoDescLikesTextView = (TextView) view.findViewById(R.id.video_desc_likes);
-			videoDescDislikesTextView = (TextView) view.findViewById(R.id.video_desc_dislikes);
-			videoDescPublishDateTextView = (TextView) view.findViewById(R.id.video_desc_publish_date);
-			videoDescriptionTextView = (TextView) view.findViewById(R.id.video_desc_description);
-			videoDescLikesBar = (ProgressBar) view.findViewById(R.id.video_desc_likes_bar);
-			videoDescSubscribeButton = (SubscribeButton) view.findViewById(R.id.video_desc_subscribe_button);
-			videoDescSubscribeButton.setOnClickListener(new View.OnClickListener() {
+			mVideoDescChannelTextView = (TextView) view.findViewById(R.id.video_desc_channel);
+			mVideoDescViewsTextView = (TextView) view.findViewById(R.id.video_desc_views);
+			mVideoDescLikesTextView = (TextView) view.findViewById(R.id.video_desc_likes);
+			mVideoDescDislikesTextView = (TextView) view.findViewById(R.id.video_desc_dislikes);
+			mVideoDescPublishDateTextView = (TextView) view.findViewById(R.id.video_desc_publish_date);
+			mVideoDescriptionTextView = (TextView) view.findViewById(R.id.video_desc_description);
+			mVideoDescLikesBar = (ProgressBar) view.findViewById(R.id.video_desc_likes_bar);
+			mVideoDescSubscribeButton = (SubscribeButton) view.findViewById(R.id.video_desc_subscribe_button);
+			mVideoDescSubscribeButton.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
 					// subscribe / unsubscribe to this video's channel
-					new SubscribeToChannelTask(videoDescSubscribeButton, mYouTubeChannel).execute();
+					new SubscribeToChannelTask(mVideoDescSubscribeButton, mYouTubeChannel).execute();
 				}
 			});
 
 			//=======================================================================================
 			//set commentVideos
 
-			commentsExpandableListView = (ExpandableListView) view.findViewById(R.id.commentsExpandableListView);
-			commentsProgressBar = view.findViewById(R.id.comments_progress_bar);
-			noVideoCommentsView = view.findViewById(R.id.no_video_comments_text_view);
-			commentsDrawer = (SlidingDrawer) view.findViewById(R.id.comments_drawer);
-			commentsDrawer.setOnDrawerOpenListener(new OnDrawerOpenListener() {
+			mCommentsExpandableListView = (ExpandableListView) view.findViewById(R.id.commentsExpandableListView);
+			mCommentsProgressBar = view.findViewById(R.id.comments_progress_bar);
+			mNoVideoCommentsView = view.findViewById(R.id.no_video_comments_text_view);
+			mCommentsDrawer = (SlidingDrawer) view.findViewById(R.id.comments_drawer);
+			mCommentsDrawer.setOnDrawerOpenListener(new OnDrawerOpenListener() {
 				@Override
 				public void onDrawerOpened() {
-					if (commentsAdapter == null) {
-						commentsAdapter = new CommentsAdapter(mYouTubeVideo.getId(), commentsExpandableListView, commentsProgressBar, noVideoCommentsView);
+					if (mCommentsAdapter == null) {
+						mCommentsAdapter = new CommentsAdapter(mYouTubeVideo.getId(), mCommentsExpandableListView, mCommentsProgressBar, mNoVideoCommentsView);
 					}
 				}
 			});
@@ -167,66 +166,66 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 				@Override
 				public void onDrawerOpened(View drawerView) {
 					super.onDrawerOpened(drawerView);
-					commentsDrawer.open();
+					mCommentsDrawer.open();
 				}
 			};
 
 
 			drawerLayout.addDrawerListener(drawerToggle);
-			voidView = view.findViewById(R.id.void_view);
+			mVoidView = view.findViewById(R.id.void_view);
 
 			//Creat Swipe
-			voidView.setOnTouchListener(new OnSwipeTouchListener(getActivity()) {
-                public void onSwipeTop() {
-                    if (isHudVisible())
-                        hideHud();
-                    else
-                        videoDescriptionDrawer.open();
-                }
+			mVoidView.setOnTouchListener(new OnSwipeTouchListener(getActivity()) {
+				public void onSwipeTop() {
+					if (isHudVisible())
+						hideHud();
+					else
+						mVideoDescriptionDrawer.open();
+				}
 
-                public void onSwipeRight() {
-                    if (videoDrawer.isOpened())
-                        videoDrawer.close();
-                    else
-                        drawerLayout.openDrawer(Gravity.LEFT);
-                }
+				public void onSwipeRight() {
+					if (mVideoDrawer.isOpened())
+						mVideoDrawer.close();
+					else
+						drawerLayout.openDrawer(Gravity.LEFT);
+				}
 
-                public void onSwipeLeft() {
-                    if (drawerLayout.isDrawerOpen(Gravity.LEFT))
-                        drawerLayout.closeDrawer(Gravity.LEFT);
-                    else
-                        videoDrawer.open();
-                }
+				public void onSwipeLeft() {
+					if (drawerLayout.isDrawerOpen(Gravity.LEFT))
+						drawerLayout.closeDrawer(Gravity.LEFT);
+					else
+						mVideoDrawer.open();
+				}
 
-                public void onSwipeBottom() {
-                    if (videoDescriptionDrawer.isOpened())
-                        videoDescriptionDrawer.close();
-                    else
-                        showOrHideHud();
-                }
+				public void onSwipeBottom() {
+					if (mVideoDescriptionDrawer.isOpened())
+						mVideoDescriptionDrawer.close();
+					else
+						showOrHideHud();
+				}
 
-                public void onClick() {
-                    showOrHideHud();
-                }
+				public void onClick() {
+					showOrHideHud();
+				}
 
-            });
+			});
 
 			//======================================================================================
-			gridView= (GridView) view.findViewById(R.id.commentsExpandableListView1);
-			videoProgressBar = view.findViewById(R.id.comments_progress_bar1);
+			mGridView = (GridView) view.findViewById(R.id.commentsExpandableListView1);
+			mVideoProgressBar = view.findViewById(R.id.comments_progress_bar1);
 			//noVideoCommentsView1 = view.findViewById(R.id.no_video_comments_text_view1);
-			videoDrawer = (SlidingDrawer) view.findViewById(R.id.video_drawer);
-			videoDrawer.setOnDrawerOpenListener(new OnDrawerOpenListener() {
+			mVideoDrawer = (SlidingDrawer) view.findViewById(R.id.video_drawer);
+			mVideoDrawer.setOnDrawerOpenListener(new OnDrawerOpenListener() {
 				@Override
 				public void onDrawerOpened() {
-					if (videoGridAdapter == null) {
-						videoGridAdapter = new VideoGridAdapter(getActivity());
+					if (mVideoGridAdapter == null) {
+						mVideoGridAdapter = new VideoGridAdapter(getActivity());
 
 						String searchQuery = mYouTubeVideo.getTitle();
 						if (searchQuery != null) {
 							// set the video category (if the user wants to search)... otherwise it will be set-
 							// up by the VideoGridFragment
-							videoGridAdapter.setVideoCategory(VideoCategory.SEARCH_QUERY, searchQuery);
+							mVideoGridAdapter.setVideoCategory(VideoCategory.SEARCH_QUERY, searchQuery);
 
 							// set the action bar's title
 							ActionBar actionBar = getSupportActionBar();
@@ -234,8 +233,8 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 								actionBar.setTitle(searchQuery);
 						}
 					}
-					gridView.setAdapter(videoGridAdapter);
-					videoProgressBar.getLayoutParams().height=0;
+					mGridView.setAdapter(mVideoGridAdapter);
+					mVideoProgressBar.getLayoutParams().height = 0;
 				}
 			});
 
@@ -272,7 +271,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 
 		// check if the user has subscribed to a channel... if he has, then change the state of
 		// the subscribe button
-		new CheckIfUserSubbedToChannelTask(videoDescSubscribeButton, mYouTubeVideo.getChannelId()).execute();
+		new CheckIfUserSubbedToChannelTask(mVideoDescSubscribeButton, mYouTubeVideo.getChannelId()).execute();
 	}
 
 
@@ -282,16 +281,16 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 	 */
 	private void setUpHUDAndPlayVideo() {
 		mVideoDescTitleTextView.setText(mYouTubeVideo.getTitle());
-		videoDescChannelTextView.setText(mYouTubeVideo.getChannelName());
-		videoDescViewsTextView.setText(mYouTubeVideo.getViewsCount());
+		mVideoDescChannelTextView.setText(mYouTubeVideo.getChannelName());
+		mVideoDescViewsTextView.setText(mYouTubeVideo.getViewsCount());
 
 		if (mYouTubeVideo.isThumbsUpPercentageSet()) {
-			videoDescLikesTextView.setText(mYouTubeVideo.getLikeCount());
-			videoDescDislikesTextView.setText(mYouTubeVideo.getDislikeCount());
-			videoDescPublishDateTextView.setText(mYouTubeVideo.getPublishDate());
+			mVideoDescLikesTextView.setText(mYouTubeVideo.getLikeCount());
+			mVideoDescDislikesTextView.setText(mYouTubeVideo.getDislikeCount());
+			mVideoDescPublishDateTextView.setText(mYouTubeVideo.getPublishDate());
 
-			videoDescLikesBar.setProgress(mYouTubeVideo.getThumbsUpPercentage());
-			//videoDescLikesBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.video_desc_like_bar), PorterDuff.Mode.SRC_IN);
+			mVideoDescLikesBar.setProgress(mYouTubeVideo.getThumbsUpPercentage());
+			//mVideoDescLikesBar.getProgressDrawable().setColorFilter(getResources().getColor(R.color.video_desc_like_bar), PorterDuff.Mode.SRC_IN);
 		}
 
 		// load the video
@@ -302,7 +301,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 
 	@Override
 	public void onPrepared(MediaPlayer mediaPlayer) {
-		loadingVideoView.setVisibility(View.GONE);
+		mLoadingVideoView.setVisibility(View.GONE);
 		mVideoView.start();
 		showHud();
 	}
@@ -338,18 +337,18 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 			getSupportActionBar().show();
 			getSupportActionBar().setTitle(mYouTubeVideo.getTitle());
 			mMediaController.show(0);
-			videoDescriptionDrawer.close();
-			videoDescriptionDrawer.setVisibility(View.INVISIBLE);
-			commentsDrawer.close();
-			commentsDrawer.setVisibility(View.INVISIBLE);
+			mVideoDescriptionDrawer.close();
+			mVideoDescriptionDrawer.setVisibility(View.INVISIBLE);
+			mCommentsDrawer.close();
+			mCommentsDrawer.setVisibility(View.INVISIBLE);
 
 			// hide UI after a certain timeout (defined in UI_VISIBILITY_TIMEOUT)
-			timerHandler = new Handler();
-			timerHandler.postDelayed(new Runnable() {
+			mTimerHandler = new Handler();
+			mTimerHandler.postDelayed(new Runnable() {
 				@Override
 				public void run() {
 					hideHud();
-					timerHandler = null;
+					mTimerHandler = null;
 				}
 			}, HUD_VISIBILITY_TIMEOUT);
 		}
@@ -365,16 +364,16 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 			getSupportActionBar().hide();
 			mMediaController.hide();
 
-			videoDescriptionDrawer.setVisibility(View.VISIBLE);
-			commentsDrawer.setVisibility(View.VISIBLE);
+			mVideoDescriptionDrawer.setVisibility(View.VISIBLE);
+			mCommentsDrawer.setVisibility(View.VISIBLE);
 
-			// If there is a timerHandler running, then cancel it (stop if from running).  This way,
+			// If there is a mTimerHandler running, then cancel it (stop if from running).  This way,
 			// if the HUD was hidden on the 5th second, and the user reopens the HUD, this code will
 			// prevent the HUD to re-disappear 2 seconds after it was displayed (assuming that
 			// UI_VISIBILITY_TIMEOUT = 7 seconds).
-			if (timerHandler != null) {
-				timerHandler.removeCallbacksAndMessages(null);
-				timerHandler = null;
+			if (mTimerHandler != null) {
+				mTimerHandler.removeCallbacksAndMessages(null);
+				mTimerHandler = null;
 			}
 		}
 	}
@@ -510,7 +509,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
                 posi = currentVideoPosition;
                 //======================================
 				mVideoView.stopPlayback();
-				loadingVideoView.setVisibility(View.VISIBLE);
+				mLoadingVideoView.setVisibility(View.VISIBLE);
 			}
 		}
 
@@ -591,7 +590,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 
 		@Override
 		protected void onPostExecute(String description) {
-			videoDescriptionTextView.setText(description);
+			mVideoDescriptionTextView.setText(description);
 		}
 
 	}

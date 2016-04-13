@@ -42,7 +42,7 @@ public class GPSTrack extends Service implements LocationListener {
     // flag for GPS status
     boolean canGetLocation = false;
 
-    Location location; // location
+    Location location; // mLocation
     double latitude; // latitude
     double longitude; // longitude
 
@@ -78,7 +78,7 @@ public class GPSTrack extends Service implements LocationListener {
                 // no network provider is enabled
             } else {
                 this.canGetLocation = true;
-                // First get location from Network Provider
+                // First get mLocation from Network Provider
                 if (isNetworkEnabled) {
 
                     locationManager.requestLocationUpdates(
@@ -282,7 +282,7 @@ public class GPSTrack extends Service implements LocationListener {
 
     @Override
     public void onProviderEnabled(String provider) {
-       // if(PreferencesFragment.location.isChecked())
+       // if(PreferencesFragment.mLocation.isChecked())
          //   MainActivity.TEST = true;
     }
 

@@ -144,17 +144,7 @@ public class PreferencesFragment extends PreferenceFragment {
     public void onStart() {
         mRegion = mRegionPref.getValue();
         if (Build.VERSION.SDK_INT < 23) {
-            mGps = new GPSTrack(getActivity());
-            if (mGps.canGetLocation()) {
-                Toast.makeText(getActivity(), "GPS is enabled", Toast.LENGTH_LONG).show();
-                MainActivity.TEST = true;
-                mGps.stopUsingGPS();
-                //mLocation.setChecked(true);
-            } else {
-                Toast.makeText(getActivity(), "GPS is NOT enabled", Toast.LENGTH_LONG).show();
-                mLocation.setChecked(false);
-                MainActivity.TEST = false;
-            }
+            showLocationEnable();
         }
         else
         {
@@ -167,17 +157,7 @@ public class PreferencesFragment extends PreferenceFragment {
             }
             else
             {
-                mGps = new GPSTrack(getActivity());
-                if (mGps.canGetLocation()) {
-                    Toast.makeText(getActivity(), "GPS is enabled", Toast.LENGTH_LONG).show();
-                    MainActivity.TEST = true;
-                    mGps.stopUsingGPS();
-                    //mLocation.setChecked(true);
-                } else {
-                    Toast.makeText(getActivity(), "GPS is NOT enabled", Toast.LENGTH_LONG).show();
-                    mLocation.setChecked(false);
-                    MainActivity.TEST = false;
-                }
+               showLocationEnable();
             }
         }
         super.onStart();
@@ -209,6 +189,20 @@ public class PreferencesFragment extends PreferenceFragment {
         }
     }
 
+    private void showLocationEnable()
+    {
+        mGps = new GPSTrack(getActivity());
+        if (mGps.canGetLocation()) {
+            Toast.makeText(getActivity(), "GPS is enabled", Toast.LENGTH_LONG).show();
+            MainActivity.TEST = true;
+            mGps.stopUsingGPS();
+            //mLocation.setChecked(true);
+        } else {
+            Toast.makeText(getActivity(), "GPS is NOT enabled", Toast.LENGTH_LONG).show();
+            mLocation.setChecked(false);
+            MainActivity.TEST = false;
+        }
+    }
     private void requestLocationPermissions() {
 
         if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),

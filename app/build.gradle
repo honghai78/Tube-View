@@ -1,15 +1,31 @@
 apply plugin: 'com.android.application'
 
+dependencies {
+
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
+    compile 'com.google.http-client:google-http-client-android:1.21.0'
+    compile 'com.google.apis:google-api-services-youtube:v3-rev164-1.21.0'
+    compile 'org.jsoup:jsoup:1.8.3'
+    compile 'org.mozilla:rhino:1.7.7'
+    compile 'com.github.moraisigor:slidingdrawer:1.5.5'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.0.0'
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "shine.tran.tubeview"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
-        versionName "1.2.4 Free"
+        versionName "1.2.5 Free"
     }
     buildTypes {
         release {
@@ -21,7 +37,7 @@ android {
     productFlavors {
         nonFree {
             applicationId "shine.tran.tubeview"
-            versionName "1.2.4 Free"
+            versionName "1.2.5 Free"
             resValue "string", "app_name", "Tube View"
         }
     }
@@ -29,17 +45,4 @@ android {
 configurations {
     nonFreeCompile
     ossCompile
-}
-dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
-    compile 'com.google.http-client:google-http-client-android:1.21.0'
-    compile 'com.google.apis:google-api-services-youtube:v3-rev164-1.21.0'
-    compile 'org.jsoup:jsoup:1.8.3'
-    compile 'org.mozilla:rhino:1.7.7'
-    compile 'com.github.moraisigor:slidingdrawer:1.5.5'
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile files('libs/YouTubeAndroidPlayerApi.jar')
 }

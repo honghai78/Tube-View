@@ -1,5 +1,6 @@
 package shine.tran.tubeview.gui.activities;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -7,12 +8,15 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.CheckBoxPreference;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
@@ -51,8 +55,9 @@ public class MainActivity extends AppCompatActivity {
         //	getSupportActionBar().setHomeButtonEnabled(true);
         setContentView(R.layout.activity_main);
         new InternetCheck().execute(this);
+
         sharedPref = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-        RADIUS = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getString(this.getString(R.string.pref_key_use_radius), "1000");
+        RADIUS = sharedPref.getString(this.getString(R.string.pref_key_use_radius), "1000");
 
         progressBar = new ProgressDialog(MainActivity.this);
         progressBar.setCancelable(false);
@@ -60,10 +65,16 @@ public class MainActivity extends AppCompatActivity {
         progressBar.show();
 
         //==================================================================
-
-
-        //======================================================================
         TEST = sharedPref.getBoolean(MainActivity.this.getString(R.string.pref_key_use_location), false);
+        if(Build.VERSION.SDK_INT > 22) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                    != PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)
+                    != PackageManager.PERMISSION_GRANTED) {
+                TEST = false;
+            }
+        }
+        //======================================================================
         GPSTrack gps = new GPSTrack(MainActivity.this);
         if (gps.canGetLocation()) {
             COUNTRY_CODE_VALUE = gps.getRegionCode(MainActivity.this);
@@ -90,9 +101,6 @@ public class MainActivity extends AppCompatActivity {
                 country = getResources().getConfiguration().locale.getCountry();
             }
             COUNTRY_CODE_VALUE = country.toUpperCase();
-            if (Build.VERSION.SDK_INT > 22) {
-                Toast.makeText(MainActivity.ACTIVITY, "SORRY: \nThis version of the Tube View , we do not support GPS on Android 6.0 Marshmallow", Toast.LENGTH_LONG).show();
-            }
         }
         showRegion();
 

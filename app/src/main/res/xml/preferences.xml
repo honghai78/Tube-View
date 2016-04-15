@@ -27,10 +27,10 @@
             android:title="@string/pref_title_preferred_regions" />
 
         <MultiSelectListPreference
-            android:defaultValue="@array/default_language"
             android:entries="@array/languages_names"
             android:entryValues="@array/languages_codes"
             android:key="@string/pref_key_preferred_languages"
+            android:defaultValue="@array/default_language"
             android:summary="@string/pref_summary_preferred_languages"
             android:title="@string/pref_title_preferred_languages" />
     </PreferenceCategory>

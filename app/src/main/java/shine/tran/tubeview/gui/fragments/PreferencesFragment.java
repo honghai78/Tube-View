@@ -194,8 +194,8 @@ public class PreferencesFragment extends PreferenceFragment {
         mGps = new GPSTrack(getActivity());
         if (mGps.canGetLocation()) {
             Toast.makeText(getActivity(), "GPS is enabled", Toast.LENGTH_LONG).show();
-            MainActivity.TEST = true;
-            mGps.stopUsingGPS();
+            if(mLocation.isChecked()) MainActivity.TEST = true;
+  //          mGps.stopUsingGPS();
             //mLocation.setChecked(true);
         } else {
             Toast.makeText(getActivity(), "GPS is NOT enabled", Toast.LENGTH_LONG).show();

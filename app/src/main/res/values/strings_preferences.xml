@@ -52,19 +52,77 @@
 
 
 	<string-array name="languages_names">
+        <item>Afrikaans</item>
+        <item>Albanian</item>
+        <item>Basque</item>
+        <item>Catalan</item>
+		<item>Chinese</item>
 		<item>English</item>
+        <item>French</item>
+        <item>German</item>
+		<item>Hungarian</item>
+		<item>Indonesian</item>
+        <item>Italian</item>
+        <item>Icelandic</item>
+        <item>Japanese</item>
+        <item>Korean</item>
+        <item>Portuguese</item>
+		<item>Thai</item>
+        <item>Russian</item>
+        <item>Spanish</item>
+		<item>Ukrainian</item>
 		<item>Vietnamese</item>
-	</string-array>
+        <item>Yemen</item>
+    </string-array>
 
 	<string name="lang_en">en(?:-.*)?</string>	<!-- Regex that will match "en", "en-GB", ...etc -->
 	<string-array name="languages_codes">
-		<item>@string/lang_en</item>
+        <item>af(?:-.*)?</item>
+        <item>sq(?:-.*)?</item>
+        <item>eu(?:-.*)?</item>
+        <item>ca(?:-.*)?</item>
+		<item>zh(?:-.*)?</item>
+		<item>en(?:-.*)?</item>
+        <item>fr(?:-.*)?</item>
+        <item>de(?:-.*)?</item>
+        <item>hu(?:-.*)?</item>
+		<item>id(?:-.*)?</item>
+        <item>it(?:-.*)?</item>
+        <item>is(?:-.*)?</item>
+        <item>ja(?:-.*)?</item>
+        <item>ko(?:-.*)?</item>
+        <item>pt(?:-.*)?</item>
+        <item>th(?:-.*)?</item>
+        <item>ru(?:-.*)?</item>
+        <item>es(?:-.*)?</item>
+        <item>uk(?:-.*)?</item>
 		<item>vi(?:-.*)?</item>
+        <item>ar(?:-.*)?</item>
 		<!-- e.g. "es-419" -->
 	</string-array>
 
 	<string-array name="default_language">
-		<item>@string/lang_en</item>
+        <item>af(?:-.*)?</item>
+        <item>sq(?:-.*)?</item>
+        <item>eu(?:-.*)?</item>
+        <item>ca(?:-.*)?</item>
+        <item>zh(?:-.*)?</item>
+        <item>en(?:-.*)?</item>
+        <item>fr(?:-.*)?</item>
+        <item>de(?:-.*)?</item>
+        <item>hu(?:-.*)?</item>
+        <item>id(?:-.*)?</item>
+        <item>it(?:-.*)?</item>
+        <item>is(?:-.*)?</item>
+        <item>ja(?:-.*)?</item>
+        <item>ko(?:-.*)?</item>
+        <item>pt(?:-.*)?</item>
+        <item>th(?:-.*)?</item>
+        <item>ru(?:-.*)?</item>
+        <item>es(?:-.*)?</item>
+        <item>uk(?:-.*)?</item>
+        <item>vi(?:-.*)?</item>
+        <item>ar(?:-.*)?</item>
 	</string-array>
 
 	<string-array name="country_names">
@@ -83,6 +141,7 @@
 		<item>Bulgaria</item>
 		<item>Canada</item>
 		<item>Chile</item>
+		<item>China</item>
 		<item>Colombia</item>
 		<item>Croatia</item>
 		<item>Czech Republic</item>
@@ -177,6 +236,7 @@
 		<item>BG</item>
 		<item>CA</item>
 		<item>CL</item>
+		<item>CN</item>
 		<item>CO</item>
 		<item>HR</item>
 		<item>CZ</item>

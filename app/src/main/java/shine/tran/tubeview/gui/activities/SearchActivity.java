@@ -76,7 +76,7 @@ public class SearchActivity extends BackActivity {
                 searchView.setQuery("", false);
                 searchView.setIconified(true);
                 menu.findItem(R.id.menu_search).collapseActionView();
-                subscriptionsDb.stringSearch(query);
+                if(!subscriptionsDb.checkStringDataSearch(array, query)) subscriptionsDb.stringSearch(query);
                 // run the search activity
                 Intent i = new Intent(SearchActivity.this, SearchActivity.class);
                 i.setAction(Intent.ACTION_SEARCH);

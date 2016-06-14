@@ -63,6 +63,14 @@ public class SubscriptionsDb extends SQLiteOpenHelper {
         return (rowsDeleted >= 0);
     }
 
+    public boolean checkStringDataSearch (List<String> list, String string)
+    {
+        for(int i=0; i<list.size(); i++)
+            if(list.get(i).equalsIgnoreCase(string))
+                return true;
+        return false;
+    }
+
     public List<String> getStringDataSearch()  {
         ArrayList<String> stringDataSearch = new ArrayList<>();
         Cursor c = getReadableDatabase().query(SubscriptionsTable.TABLE_SEARCH_NAME, null, null, null, null, null, null);

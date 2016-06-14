@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPref = null;
     SubscriptionsDb subscriptionsDb;
     private List array;
+    private ArrayAdapterSearchView searchView;
+     ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,20 +123,28 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
-        array = subscriptionsDb.getStringDataSearch();
+       // array = subscriptionsDb.getStringDataSearch();
+        array=subscriptionsDb.getStringDataSearch();
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_activity_menu, menu);
         // setup the SearchView (actionbar)
         final MenuItem searchItem = menu.findItem(R.id.menu_search);
-        final ArrayAdapterSearchView searchView = (ArrayAdapterSearchView) MenuItemCompat.getActionView(searchItem);
+         searchView = (ArrayAdapterSearchView) MenuItemCompat.getActionView(searchItem);
         // final SearchView.SearchAutoComplete = ()
-
+        searchView.setOnSearchClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                array=subscriptionsDb.getStringDataSearch();
+            }
+        });
         //==========================================
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (this, android.R.layout.select_dialog_item, array);
+
         //====================================================
 
         searchView.setQueryHint(getString(R.string.search_videos));
+       adapter = new ArrayAdapter<String>
+                (this, android.R.layout.select_dialog_item, array);
+
         searchView.setAdapter(adapter);
         searchView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -157,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
                 searchView.setQuery("", false);
                 searchView.setIconified(true);
                 menu.findItem(R.id.menu_search).collapseActionView();
-                subscriptionsDb.stringSearch(query);
+                if(!subscriptionsDb.checkStringDataSearch(array, query)) subscriptionsDb.stringSearch(query);
                 // run the search activity
                 Intent i = new Intent(MainActivity.this, SearchActivity.class);
                 i.setAction(Intent.ACTION_SEARCH);
@@ -192,16 +202,24 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onPostResume() {
-        array = subscriptionsDb.getStringDataSearch();
-        if (PreferencesFragment.RE_LOAD) {
-            PreferencesFragment.RE_LOAD = false;
-            showRegion();
-            VideosGridFragment.mGridView.setSelection(0);
-            VideosGridFragment.mVideoGridAdapter.setVideoCategory(VideosGridFragment.mVideoCategory);
-            VideosGridFragment.mVideoGridAdapter.reLoad();
-        }
+    protected void onPostResume(){
+            array = subscriptionsDb.getStringDataSearch();
+
+            if (PreferencesFragment.RE_LOAD) {
+                PreferencesFragment.RE_LOAD = false;
+                showRegion();
+                VideosGridFragment.mGridView.setSelection(0);
+                VideosGridFragment.mVideoGridAdapter.setVideoCategory(VideosGridFragment.mVideoCategory);
+                VideosGridFragment.mVideoGridAdapter.reLoad();
+            }
         super.onPostResume();
+    }
+
+    @Override
+    protected void onResume() {
+        array = subscriptionsDb.getStringDataSearch();
+        //adapter.notifyDataSetChanged();
+        super.onResume();
     }
 
     @Override

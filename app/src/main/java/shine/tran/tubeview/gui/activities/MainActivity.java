@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.SQLException;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -24,10 +25,20 @@ import android.telephony.TelephonyManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import shine.tran.tubeview.R;
+import shine.tran.tubeview.businessobjects.db.SubscriptionsDb;
 import shine.tran.tubeview.gui.app.TubeViewApp;
+import shine.tran.tubeview.gui.businessobjects.ArrayAdapterSearchView;
 import shine.tran.tubeview.gui.businessobjects.GPSTrack;
 import shine.tran.tubeview.gui.fragments.PreferencesFragment;
 import shine.tran.tubeview.gui.fragments.VideosGridFragment;
@@ -48,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
     private static long back_pressed;
 
     SharedPreferences sharedPref = null;
-
+    SubscriptionsDb subscriptionsDb;
+    private List array;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         //==================================================================
         TEST = sharedPref.getBoolean(MainActivity.this.getString(R.string.pref_key_use_location), false);
-        if(Build.VERSION.SDK_INT > 22) {
+        if (Build.VERSION.SDK_INT > 22) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
                     != PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(this,
                     Manifest.permission.ACCESS_FINE_LOCATION)
@@ -103,17 +115,36 @@ public class MainActivity extends AppCompatActivity {
             COUNTRY_CODE_VALUE = country.toUpperCase();
         }
         showRegion();
-
+        //===============================================================
+        subscriptionsDb = new SubscriptionsDb(getBaseContext());
     }
 
     @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
+        array = subscriptionsDb.getStringDataSearch();
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_activity_menu, menu);
         // setup the SearchView (actionbar)
         final MenuItem searchItem = menu.findItem(R.id.menu_search);
-        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        final ArrayAdapterSearchView searchView = (ArrayAdapterSearchView) MenuItemCompat.getActionView(searchItem);
+        // final SearchView.SearchAutoComplete = ()
+
+        //==========================================
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>
+                (this, android.R.layout.select_dialog_item, array);
+        //====================================================
+
         searchView.setQueryHint(getString(R.string.search_videos));
+        searchView.setAdapter(adapter);
+        searchView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                searchView.setQuery(adapter.getItem(position).toString(), false);
+
+            }
+
+        });
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextChange(String newText) {
@@ -126,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 searchView.setQuery("", false);
                 searchView.setIconified(true);
                 menu.findItem(R.id.menu_search).collapseActionView();
-
+                subscriptionsDb.stringSearch(query);
                 // run the search activity
                 Intent i = new Intent(MainActivity.this, SearchActivity.class);
                 i.setAction(Intent.ACTION_SEARCH);
@@ -162,6 +193,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onPostResume() {
+        array = subscriptionsDb.getStringDataSearch();
         if (PreferencesFragment.RE_LOAD) {
             PreferencesFragment.RE_LOAD = false;
             showRegion();
@@ -215,7 +247,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     class InternetCheck extends AsyncTask<Activity, Void, Boolean> {
-
 
 
         @Override

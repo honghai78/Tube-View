@@ -69,6 +69,7 @@ public class SearchVideoGridFragment extends FragmentEx {
         final MenuItem searchItem = menu.findItem(R.id.menu_search);
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setQueryHint(getString(R.string.search_videos));
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextChange(String newText) {

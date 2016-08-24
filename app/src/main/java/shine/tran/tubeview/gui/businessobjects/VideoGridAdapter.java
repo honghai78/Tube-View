@@ -84,7 +84,7 @@ public class VideoGridAdapter extends BaseAdapterEx<YouTubeVideo> {
 			}
 
 			// get the videos from the web asynchronously
-			new GetYouTubeVideosTask(getYouTubeVideos, this).execute();
+			new GetYouTubeVideosTask(getYouTubeVideos, this).executeInParallel();
 		} catch (IOException e) {
 			Log.e(TAG, "Could not init " + videoCategory, e);
 			Toast.makeText(getContext(),
@@ -119,7 +119,7 @@ public class VideoGridAdapter extends BaseAdapterEx<YouTubeVideo> {
 		// if it reached the bottom of the list, then try to get the next page of videos
 		if (position == getCount() - 1) {
 			Log.w(TAG, "BOTTOM REACHED!!!");
-			new GetYouTubeVideosTask(getYouTubeVideos, this).execute();
+			new GetYouTubeVideosTask(getYouTubeVideos, this).executeInParallel();
 		}
 
 		return row;

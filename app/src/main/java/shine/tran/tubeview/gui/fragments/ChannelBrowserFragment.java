@@ -67,7 +67,7 @@ public class ChannelBrowserFragment extends FragmentEx {
 			@Override
 			public void onClick(View v) {
 				// subscribe / unsubscribe to this video's mChannel
-				new SubscribeToChannelTask(mChannelSubscribeButton, mChannel).execute();
+				new SubscribeToChannelTask(mChannelSubscribeButton, mChannel).executeInParallel();
 			}
 		});
 

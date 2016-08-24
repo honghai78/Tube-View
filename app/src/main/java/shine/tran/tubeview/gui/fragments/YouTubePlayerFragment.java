@@ -40,6 +40,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import shine.tran.tubeview.R;
+import shine.tran.tubeview.businessobjects.AsyncTaskParallel;
 import shine.tran.tubeview.businessobjects.GetVideoDescription;
 import shine.tran.tubeview.businessobjects.GetVideosDetailsByIDs;
 import shine.tran.tubeview.businessobjects.VideoCategory;
@@ -141,7 +142,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 				@Override
 				public void onClick(View v) {
 					// subscribe / unsubscribe to this video's channel
-					new SubscribeToChannelTask(mVideoDescSubscribeButton, mYouTubeChannel).execute();
+					new SubscribeToChannelTask(mVideoDescSubscribeButton, mYouTubeChannel).executeInParallel();
 				}
 			});
 
@@ -255,7 +256,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 			} else {
 				// ... or the video URL is passed to Tube View via another Android app
 				GetVideoDetailsTask getVideoDetailsTask = new GetVideoDetailsTask();
-				getVideoDetailsTask.execute();
+				getVideoDetailsTask.executeInParallel();
 			}
 		}
 
@@ -270,11 +271,11 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 
 	private void getVideoInfoTasks() {
 		// get Channel info (e.g. avatar...etc) task
-		new GetYouTubeChannelInfoTask().execute(mYouTubeVideo.getChannelId());
+		new GetYouTubeChannelInfoTask().executeInParallel(mYouTubeVideo.getChannelId());
 
 		// check if the user has subscribed to a channel... if he has, then change the state of
 		// the subscribe button
-		new CheckIfUserSubbedToChannelTask(mVideoDescSubscribeButton, mYouTubeVideo.getChannelId()).execute();
+		new CheckIfUserSubbedToChannelTask(mVideoDescSubscribeButton, mYouTubeVideo.getChannelId()).executeInParallel();
 	}
 
 
@@ -467,7 +468,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 		// get the video's steam
 		new GetStreamTask(mYouTubeVideo, true).execute();
 		// get the video description
-		new GetVideoDescriptionTask().execute();
+		new GetVideoDescriptionTask().executeInParallel();
 	}
 
 
@@ -479,7 +480,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 	 * Given a YouTubeVideo, it will asynchronously get a list of streams (supplied by YouTube) and
 	 * then it asks the mVideoView to start playing a stream.
 	 */
-	private class GetStreamTask extends AsyncTask<Void, Exception, StreamMetaDataList> {
+	private class GetStreamTask extends AsyncTaskParallel<Void, Exception, StreamMetaDataList> {
 
 		/** YouTube Video */
 		private YouTubeVideo	youTubeVideo;
@@ -568,7 +569,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 	/**
 	 * Get the video's description and set the appropriate text view.
 	 */
-	private class GetVideoDescriptionTask extends AsyncTask<Void, Void, String> {
+	private class GetVideoDescriptionTask extends AsyncTaskParallel<Void, Void, String> {
 
 		@Override
 		protected String doInBackground(Void... params) {
@@ -611,7 +612,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 	 * This task will, from the given video URL, get the details of the video (e.g. video name,
 	 * likes ...etc).
 	 */
-	private class GetVideoDetailsTask extends AsyncTask<Void, Void, YouTubeVideo> {
+	private class GetVideoDetailsTask extends AsyncTaskParallel<Void, Void, YouTubeVideo> {
 
 		private String videoUrl = null;
 
@@ -704,7 +705,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 	////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-	private class GetYouTubeChannelInfoTask extends AsyncTask<String, Void, YouTubeChannel> {
+	private class GetYouTubeChannelInfoTask extends AsyncTaskParallel<String, Void, YouTubeChannel> {
 
 		private final String TAG = GetYouTubeChannelInfoTask.class.getSimpleName();
 

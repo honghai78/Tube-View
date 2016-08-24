@@ -8,6 +8,7 @@ import java.util.List;
 
 //import shine.tran.tubeview.R;
 import shine.tran.tubeview.R;
+import shine.tran.tubeview.businessobjects.AsyncTaskParallel;
 import shine.tran.tubeview.businessobjects.YouTubeChannel;
 import shine.tran.tubeview.gui.app.TubeViewApp;
 import shine.tran.tubeview.gui.businessobjects.SubsAdapter;
@@ -16,7 +17,7 @@ import shine.tran.tubeview.gui.businessobjects.SubsAdapter;
  * Gets a list of channels that the user is subscribed to and then passes the channels list to
  * the given {@link SubsAdapter}.
  */
-public class GetSubscribedChannelsTask extends AsyncTask<Void, Void, List<YouTubeChannel>> {
+public class GetSubscribedChannelsTask extends AsyncTaskParallel<Void, Void, List<YouTubeChannel>> {
 
     private SubsAdapter adapter;
 

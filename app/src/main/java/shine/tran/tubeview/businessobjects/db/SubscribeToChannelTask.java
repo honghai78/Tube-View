@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.widget.Toast;
 
 import shine.tran.tubeview.R;
+import shine.tran.tubeview.businessobjects.AsyncTaskParallel;
 import shine.tran.tubeview.businessobjects.YouTubeChannel;
 import shine.tran.tubeview.gui.app.TubeViewApp;
 import shine.tran.tubeview.gui.businessobjects.SubsAdapter;
@@ -12,7 +13,7 @@ import shine.tran.tubeview.gui.businessobjects.SubscribeButton;
 /**
  * A task that subscribes / unsubscribes to a YouTube channel.
  */
-public class SubscribeToChannelTask extends AsyncTask<Void, Void, Boolean> {
+public class SubscribeToChannelTask extends AsyncTaskParallel<Void, Void, Boolean> {
 
     /**
      * Set to true if the user wants to subscribe to a youtube channel;  false if the user wants to

@@ -5,13 +5,14 @@ import android.util.Log;
 import android.widget.Toast;
 
 import shine.tran.tubeview.R;
+import shine.tran.tubeview.businessobjects.AsyncTaskParallel;
 import shine.tran.tubeview.gui.app.TubeViewApp;
 import shine.tran.tubeview.gui.businessobjects.SubscribeButton;
 
 /**
  * A task that checks if a user is subscribed to a particular YouTube channel.
  */
-public class CheckIfUserSubbedToChannelTask extends AsyncTask<Void, Void, Boolean> {
+public class CheckIfUserSubbedToChannelTask extends AsyncTaskParallel<Void, Void, Boolean> {
 
     private SubscribeButton subscribeButton;
     private String channelId;

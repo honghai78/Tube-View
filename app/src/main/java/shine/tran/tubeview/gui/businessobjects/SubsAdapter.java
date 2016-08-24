@@ -22,7 +22,7 @@ public class SubsAdapter extends BaseAdapterEx<YouTubeChannel> {
 
 	private SubsAdapter(Context context) {
 		super(context);
-		new GetSubscribedChannelsTask(this).execute();
+		new GetSubscribedChannelsTask(this).executeInParallel();
 	}
 
 

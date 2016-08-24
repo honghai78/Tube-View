@@ -14,6 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import shine.tran.tubeview.R;
+import shine.tran.tubeview.businessobjects.AsyncTaskParallel;
 
 /**
  * An {@link ImageView} can load images/pictures located on the internet asynchronously.
@@ -53,13 +54,13 @@ public class InternetImageView extends ImageView {
 	 */
 	public void setImageAsync(String url) {
 		setImageResource(R.drawable.thumbnail_default);
-		new DownloadImageTask().execute(url);
+		new DownloadImageTask().executeInParallel(url);
 	}
 
 
 	////////////////////////////
 
-	protected class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
+	protected class DownloadImageTask extends AsyncTaskParallel<String, Void, Bitmap> {
 
 		private static final String TAG = "DownloadImageTask";
 

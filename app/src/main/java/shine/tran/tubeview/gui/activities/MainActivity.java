@@ -119,12 +119,13 @@ public class MainActivity extends AppCompatActivity {
         showRegion();
         //===============================================================
         subscriptionsDb = new SubscriptionsDb(getBaseContext());
+        array=subscriptionsDb.getStringDataSearch();
     }
 
     @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
        // array = subscriptionsDb.getStringDataSearch();
-        array=subscriptionsDb.getStringDataSearch();
+
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_activity_menu, menu);
         // setup the SearchView (actionbar)
@@ -143,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
         searchView.setQueryHint(getString(R.string.search_videos));
        adapter = new ArrayAdapter<String>
-                (this, android.R.layout.select_dialog_item, array);
+                (this, R.layout.autocomplete_item, array);
 
         searchView.setAdapter(adapter);
         searchView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -218,14 +219,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         array = subscriptionsDb.getStringDataSearch();
-        //adapter.notifyDataSetChanged();
+      //  adapter.notifyDataSetChanged();
         super.onResume();
+    }
+
+    @Override
+    protected void onRestart() {
+        array = subscriptionsDb.getStringDataSearch();
+        //adapter.notifyDataSetChanged();
+        super.onRestart();
     }
 
     @Override
     public void onStart() {
         super.onStart();
-
         //======================
     }
 

@@ -40,7 +40,7 @@ public class SearchActivity extends BackActivity {
 	public boolean onCreateOptionsMenu(final Menu menu) {
         array = subscriptionsDb.getStringDataSearch();
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>
-                (this, android.R.layout.select_dialog_item, array);
+                (this, R.layout.autocomplete_item, array);
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.main_activity_menu, menu);
 		// setup the SearchView (actionbar)

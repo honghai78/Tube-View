@@ -64,14 +64,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/nonFree/jni" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/nonFree/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/nonFree/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/jni" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestNonFree/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestNonFree/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestNonFree/assets" type="java-test-resource" />
@@ -80,6 +72,14 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestNonFree/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestNonFree/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestNonFree/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/jni" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testNonFree/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
@@ -122,6 +122,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />

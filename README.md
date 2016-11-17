@@ -17,7 +17,6 @@ More features will be added in the near future.
 * Open Source
 * Innovative design
 * No intrusive ads
-* Only requires 1 Android-permission (Internet)
 * Not dependent on the GAPPS/Google Apps (i.e. YouTube official app)
 * No need for Google/YouTube account to operate
 * My code does not spy on your behaviour!
@@ -34,7 +33,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-You should have received a [copy of the GNU General Public License](https://raw.githubusercontent.com/ram-on/SkyTube/master/LICENSE)
+You should have received a [copy of the GNU General Public License](https://raw.githubusercontent.com/honghai78/Tube-View/master/LICENSE)
 along with this program.  If not, see http://www.gnu.org/licenses/.
 
 This project is not affiliated with YouTube™ or any of its partners and/or products.

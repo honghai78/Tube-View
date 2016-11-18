@@ -25,6 +25,7 @@ import shine.tran.tubeview.businessobjects.VideoStream.VideoResolution;
 import shine.tran.tubeview.gui.activities.MainActivity;
 import shine.tran.tubeview.gui.activities.PreferencesActivity;
 import shine.tran.tubeview.gui.businessobjects.GPSTrack;
+
 import android.support.design.widget.Snackbar;
 
 /**
@@ -145,19 +146,14 @@ public class PreferencesFragment extends PreferenceFragment {
         mRegion = mRegionPref.getValue();
         if (Build.VERSION.SDK_INT < 23) {
             showLocationEnable();
-        }
-        else
-        {
+        } else {
             if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION)
                     != PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(getActivity(),
                     Manifest.permission.ACCESS_FINE_LOCATION)
-                    != PackageManager.PERMISSION_GRANTED)
-            {
+                    != PackageManager.PERMISSION_GRANTED) {
                 mLocation.setChecked(false);
-            }
-            else
-            {
-               showLocationEnable();
+            } else {
+                showLocationEnable();
             }
         }
         super.onStart();
@@ -189,13 +185,12 @@ public class PreferencesFragment extends PreferenceFragment {
         }
     }
 
-    private void showLocationEnable()
-    {
+    private void showLocationEnable() {
         mGps = new GPSTrack(getActivity());
         if (mGps.canGetLocation()) {
             Toast.makeText(getActivity(), "GPS is enabled", Toast.LENGTH_LONG).show();
-            if(mLocation.isChecked()) MainActivity.TEST = true;
-  //          mGps.stopUsingGPS();
+            if (mLocation.isChecked()) MainActivity.TEST = true;
+            //          mGps.stopUsingGPS();
             //mLocation.setChecked(true);
         } else {
             Toast.makeText(getActivity(), "GPS is NOT enabled", Toast.LENGTH_LONG).show();
@@ -203,6 +198,7 @@ public class PreferencesFragment extends PreferenceFragment {
             MainActivity.TEST = false;
         }
     }
+
     private void requestLocationPermissions() {
 
         if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),

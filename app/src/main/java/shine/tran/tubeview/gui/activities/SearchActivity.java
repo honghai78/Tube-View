@@ -13,6 +13,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,10 +32,15 @@ import shine.tran.tubeview.gui.fragments.SearchVideoGridFragment;
 public class SearchActivity extends BackActivity {
     private List array;
     private SubscriptionsDb subscriptionsDb;
+    private AdView avBanner;
+    private AdRequest adRequest;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search);
+        avBanner =(AdView)findViewById(R.id.av_banner);
+        adRequest = new AdRequest.Builder().build();
+        avBanner.loadAd(adRequest);
         subscriptionsDb= new SubscriptionsDb(getBaseContext());
 	}
 

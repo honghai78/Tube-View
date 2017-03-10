@@ -50,7 +50,6 @@ public class PreferencesFragment extends PreferenceFragment {
 
         // load the preferences from an XML resource
         addPreferencesFromResource(R.xml.preferences);
-
         ListPreference resolutionPref = (ListPreference) findPreference(getString(R.string.pref_key_preferred_res));
         resolutionPref.setEntries(VideoResolution.getAllVideoResolutionsNames());
         resolutionPref.setEntryValues(VideoResolution.getAllVideoResolutionsIds());

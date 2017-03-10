@@ -82,9 +82,7 @@ public class SearchVideoGridFragment extends FragmentEx {
                 searchView.setQuery("", false);
                 searchView.setIconified(true);
                 menu.findItem(R.id.menu_search).collapseActionView();
-
                 // run the search activity
-
                 return true;
             }
         });

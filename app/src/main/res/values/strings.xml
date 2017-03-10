@@ -23,4 +23,7 @@
     <string name="permission_location_rationale">Location permissions are needed to demonstrate access.</string>
     <string name="ok">OK</string>
     <string name="permissions_not_granted">Permissions were not granted.</string>
+    <!--Ad unit-->
+    <string name="ad_unit_banner">ca-app-pub-5574808876371443/5432119616</string>
+    <!--<string name="ad_unit_full">ca-app-pub-8567317612161629/2966569195</string>-->
 </resources>

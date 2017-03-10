@@ -167,7 +167,9 @@ public class ParseStreamMetaData {
 			e.printStackTrace();
 		}
 		Context.exit();
+		if(result!=null)
 		return result.toString();
+		else return null;
 	}
 
 

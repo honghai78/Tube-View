@@ -31,6 +31,9 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -63,13 +66,17 @@ public class MainActivity extends AppCompatActivity {
     private List array;
     private ArrayAdapterSearchView searchView;
      ArrayAdapter<String> adapter;
+    private AdView avBanner;
+    private AdRequest adRequest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //	getSupportActionBar().setHomeButtonEnabled(true);
         setContentView(R.layout.activity_main);
         new InternetCheck().execute(this);
-
+        avBanner =(AdView)findViewById(R.id.av_banner);
+        adRequest = new AdRequest.Builder().build();
+        avBanner.loadAd(adRequest);
         sharedPref = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
         RADIUS = sharedPref.getString(this.getString(R.string.pref_key_use_radius), "1000");
 

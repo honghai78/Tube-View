@@ -6,6 +6,8 @@
     android:minHeight="?android:attr/listPreferredItemHeight"
     android:textAppearance="?android:attr/textAppearanceLarge"
     android:textColor="@android:color/white"
+    android:paddingLeft="20dp"
+    android:background="@color/colorPrimary"
     android:gravity="center_vertical"
     android:ellipsize="marquee"
     />

@@ -24,7 +24,7 @@
 	<color name="video_cell_background">#121744</color>
 	<color name="video_cell_text_main">#FFF</color>
 	<color name="video_cell_text_details">#808080</color>
-	<color name="grid_view_background">#FFF</color>
+	<color name="grid_view_background">#3F51B5</color>
 
 	<!--
 		Video Player Colours

@@ -5,6 +5,7 @@ package shine.tran.tubeview.gui.businessobjects;
  */
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v4.widget.CursorAdapter;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.SearchView.SearchAutoComplete;
@@ -12,6 +13,8 @@ import android.util.AttributeSet;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+
+import shine.tran.tubeview.R;
 
 public class ArrayAdapterSearchView extends SearchView {
 
@@ -29,6 +32,8 @@ public class ArrayAdapterSearchView extends SearchView {
 
     public void initialize() {
         mSearchAutoComplete = (SearchAutoComplete) findViewById(android.support.v7.appcompat.R.id.search_src_text);
+        mSearchAutoComplete.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        mSearchAutoComplete.setTextColor(Color.WHITE);
         this.setAdapter(null);
         this.setOnItemClickListener(null);
     }

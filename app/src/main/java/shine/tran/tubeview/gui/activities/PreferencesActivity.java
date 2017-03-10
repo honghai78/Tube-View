@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import shine.tran.tubeview.R;
 import shine.tran.tubeview.gui.fragments.PreferencesFragment;
 
@@ -15,12 +18,17 @@ import shine.tran.tubeview.gui.fragments.PreferencesFragment;
  */
 public class PreferencesActivity extends AppCompatActivity {
 public static View VIEW = null;
+    private AdView avBanner;
+    private AdRequest adRequest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_preferences);
         VIEW = findViewById(R.id.activity_pre);
+        avBanner =(AdView)findViewById(R.id.av_banner);
+        adRequest = new AdRequest.Builder().build();
+        avBanner.loadAd(adRequest);
         // display the PreferencesFragment as the main content
         getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, new PreferencesFragment())

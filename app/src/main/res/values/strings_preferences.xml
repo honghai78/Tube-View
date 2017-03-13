@@ -9,7 +9,7 @@
 
 	<string name="pref_title_use_radius">Enter Radius To Search</string>
 	<string name="pref_key_use_radius">pref_use_radius</string>
-	<string name="pref_summary_use_radius">Radius you want to seach (km). (ex: 5)</string>
+	<string name="pref_summary_use_radius">Radius you want to search (km). (ex: 5)</string>
 
 	<string name="pref_languages_category">LANGUAGES &amp; REGIONS</string>
 	<string name="pref_title_preferred_regions">Preferred Region</string>
@@ -32,7 +32,7 @@
 	<string name="pref_about_category">ABOUT</string>
 	<string name="pref_title_author">Author</string>
 	<string name="pref_key_author">pref_author</string>
-	<string name="app_author">Tube View\n\n\nCopyright &#169; 2016  Shine Tran - (Hai, TRAN Hong)</string>
+	<string name="app_author">TubeLocation View\n\n\nCopyright &#169; 2016  Shine Tran - (Hai, TRAN Hong)</string>
 	<string name="pref_summary_author">Copyright &#169; 2016  Shine Tran - (Hai, TRAN Hong)</string>
 	<string name="pref_title_version">Version</string>
 	<string name="pref_key_version">pref_version</string>

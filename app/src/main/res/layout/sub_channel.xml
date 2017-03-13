@@ -15,7 +15,7 @@
 			  android:background="@drawable/sub_channel_background">
 
 	<!-- CHANNEL THUMBNAIL -->
-	<shine.tran.tubeview.gui.businessobjects.InternetImageView
+	<shine.tran.localtubeview.gui.businessobjects.InternetImageView
 		android:id="@+id/sub_channel_thumbnail_image_view"
 		android:layout_width="40dp"
 		android:layout_height="wrap_content"

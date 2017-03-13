@@ -10,12 +10,11 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content">
 
-		<shine.tran.tubeview.gui.businessobjects.InternetImageView
+		<shine.tran.localtubeview.gui.businessobjects.InternetImageView
 			android:id="@+id/thumbnail_image_view"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_alignParentTop="true"
-			android:scaleType="fitXY"
 			android:adjustViewBounds="true"
 			android:src="@drawable/thumbnail_default"
 			custom:defaultImage="@drawable/thumbnail_default"
@@ -28,7 +27,6 @@
 			android:minLines="1"
 			android:maxLines="2"
 			android:text="Title"/>
-
 		<RelativeLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"

@@ -6,7 +6,7 @@
         android:id="@+id/menu_search"
         android:icon="@drawable/ic_search"
         android:title="@string/search_videos"
-        app:actionViewClass="shine.tran.tubeview.gui.businessobjects.ArrayAdapterSearchView"
+        app:actionViewClass="shine.tran.localtubeview.gui.businessobjects.ArrayAdapterSearchView"
         app:showAsAction="collapseActionView|always" />
 
 

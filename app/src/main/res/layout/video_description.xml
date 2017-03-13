@@ -36,7 +36,7 @@
 					style="@style/VideoDescTextView"
 					android:text="Channel Name"/>
 
-				<shine.tran.tubeview.gui.businessobjects.SubscribeButton
+				<shine.tran.localtubeview.gui.businessobjects.SubscribeButton
 					android:id="@+id/video_desc_subscribe_button"
 					style="@style/SubscribeButton"
 					android:layout_below="@id/video_desc_channel"/>

@@ -24,11 +24,11 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "shine.tran.tubeview"
+        applicationId "shine.tran.localtubeview"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode codeNumber
-        versionName "1.0."+formattedDate+ " Free"
+        versionName "1.0."+formattedDate+ "_Free"
         multiDexEnabled true
     }
     buildTypes {
@@ -40,9 +40,9 @@ android {
 
     productFlavors {
         free {
-            applicationId "shine.tran.tubeview"
-            versionName "1.0."+formattedDate+ " Free"
-            resValue "string", "app_name", "Local Youtube"
+            applicationId "shine.tran.localtubeview"
+            versionName "1.0."+formattedDate+ "_Free"
+            resValue "string", "app_name", "LocalTube View"
         }
     }
 }

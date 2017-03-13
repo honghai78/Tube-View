@@ -8,7 +8,7 @@
             android:key="@string/pref_key_use_location"
             android:summary="@string/pref_summary_use_location"
             android:title="@string/pref_title_use_location" />
-        <shine.tran.tubeview.gui.businessobjects.EditTextPreferenceEx
+        <shine.tran.localtubeview.gui.businessobjects.EditTextPreferenceEx
             android:defaultValue="1000"
             android:inputType="number"
             android:key="@string/pref_key_use_radius"
@@ -47,7 +47,7 @@
             android:title="@string/pref_title_preferred_res"
             />
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="@string/pref_key_use_offical_player"
             android:summary="@string/pref_summary_use_offical_player"
             android:title="@string/pref_title_use_offical_player" />
@@ -62,12 +62,11 @@
             android:summary="@string/pref_summary_author"
             android:title="@string/pref_title_author" />
         <PreferenceScreen
-            android:key="@string/pref_key_license"
-            android:summary="@string/pref_summary_license"
-            android:title="@string/pref_title_license" />
-        <PreferenceScreen
             android:key="@string/pref_key_version"
             android:title="@string/pref_title_version" />
+        <PreferenceScreen
+            android:key=""
+            android:title="" />
     </PreferenceCategory>
 
 </PreferenceScreen>

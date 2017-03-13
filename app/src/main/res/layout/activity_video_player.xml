@@ -8,15 +8,7 @@
 
 	<fragment
 		android:id="@+id/b_fragment"
-		android:name="shine.tran.tubeview.gui.fragments.YouTubePlayerFragment"
+		android:name="shine.tran.localtubeview.gui.fragments.YouTubePlayerFragment"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent" />
-	<com.google.android.gms.ads.AdView
-		android:id="@+id/av_banner"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignParentBottom="true"
-		android:layout_centerHorizontal="true"
-		ads:adSize="SMART_BANNER"
-		ads:adUnitId="@string/ad_unit_banner"></com.google.android.gms.ads.AdView>
 </RelativeLayout>

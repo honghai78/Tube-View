@@ -1,10 +1,10 @@
-package shine.tran.tubeview.gui.businessobjects;
+package shine.tran.localtubeview.gui.businessobjects;
 
 import android.content.Context;
 import android.content.Intent;
 
-import shine.tran.tubeview.businessobjects.YouTubeVideo;
-import shine.tran.tubeview.gui.activities.YouTubePlayerActivity;
+import shine.tran.localtubeview.businessobjects.YouTubeVideo;
+import shine.tran.localtubeview.gui.activities.YouTubePlayerActivity;
 
 /**
  * Launches YouTube player.

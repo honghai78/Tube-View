@@ -14,7 +14,7 @@
 		android:layout_height="wrap_content" />
 
 	<!-- CHANNEL THUMBNAIL -->
-	<shine.tran.tubeview.gui.businessobjects.InternetImageView
+	<shine.tran.localtubeview.gui.businessobjects.InternetImageView
 		android:id="@+id/comment_thumbnail_image_view"
 		android:layout_width="@dimen/top_level_comment_thumbnail_width"
 		android:layout_height="wrap_content"

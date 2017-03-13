@@ -6,7 +6,7 @@
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/a_fragment"
-        android:name="shine.tran.tubeview.gui.fragments.SearchVideoGridFragment"
+        android:name="shine.tran.localtubeview.gui.fragments.SearchVideoGridFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

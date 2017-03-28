@@ -1,5 +1,6 @@
 package shine.tran.localtubeview.gui.businessobjects;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.view.View;
@@ -22,15 +23,16 @@ public class VideoGridAdapter extends BaseAdapterEx<YouTubeVideo> {
 	/** Class used to get YouTube videos from the web. */
 	private GetYouTubeVideos	getYouTubeVideos;
 	private boolean				showChannelInfo = true;
-
+	private Activity activity = null;
 	private static final String TAG = VideoGridAdapter.class.getSimpleName();
 
 
 	/**
 	 * @see #VideoGridAdapter(Context, boolean)
 	 */
-	public VideoGridAdapter(Context context) {
+	public VideoGridAdapter(Activity context) {
 		this(context, true);
+		activity = context;
 	}
 
 
@@ -84,7 +86,7 @@ public class VideoGridAdapter extends BaseAdapterEx<YouTubeVideo> {
 			}
 
 			// get the videos from the web asynchronously
-			new GetYouTubeVideosTask(getYouTubeVideos, this).executeInParallel();
+			new GetYouTubeVideosTask(getYouTubeVideos, this, activity).executeInParallel();
 		} catch (IOException e) {
 			Log.e(TAG, "Could not init " + videoCategory, e);
 			Toast.makeText(getContext(),
@@ -119,7 +121,7 @@ public class VideoGridAdapter extends BaseAdapterEx<YouTubeVideo> {
 		// if it reached the bottom of the list, then try to get the next page of videos
 		if (position == getCount() - 1) {
 			Log.w(TAG, "BOTTOM REACHED!!!");
-			new GetYouTubeVideosTask(getYouTubeVideos, this).executeInParallel();
+			new GetYouTubeVideosTask(getYouTubeVideos, this, activity).executeInParallel();
 		}
 
 		return row;

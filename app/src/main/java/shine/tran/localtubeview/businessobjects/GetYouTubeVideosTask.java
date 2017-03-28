@@ -1,8 +1,12 @@
 package shine.tran.localtubeview.businessobjects;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
+
 import java.util.List;
 
 import shine.tran.localtubeview.gui.businessobjects.VideoGridAdapter;
+import shine.tran.localtubeview.gui.fragments.VideosGridFragment;
 
 /**
  * An asynchronous task that will retrieve YouTube videos and displays them in the supplied Adapter.
@@ -17,14 +21,17 @@ public class GetYouTubeVideosTask extends AsyncTaskParallel<Void, Void, List<You
 
 	/** Class tag. */
 	private static final String TAG = GetYouTubeVideosTask.class.getSimpleName();
-
-
-	public GetYouTubeVideosTask(GetYouTubeVideos getYouTubeVideos, VideoGridAdapter videoGridAdapter) {
+	private ProgressDialog mProgressBar;
+	private Activity activity;
+	public GetYouTubeVideosTask(GetYouTubeVideos getYouTubeVideos, VideoGridAdapter videoGridAdapter, Activity ac) {
 		this.getYouTubeVideos = getYouTubeVideos;
 		this.videoGridAdapter = videoGridAdapter;
+		activity = ac;
+		mProgressBar = new ProgressDialog(activity);
+		mProgressBar.setCancelable(false);
+		mProgressBar.setMessage("Loading.....");
+		mProgressBar.show();
 	}
-
-
 	@Override
 	protected List<YouTubeVideo> doInBackground(Void... params) {
 		List<YouTubeVideo> videos = null;
@@ -40,6 +47,7 @@ public class GetYouTubeVideosTask extends AsyncTaskParallel<Void, Void, List<You
 	@Override
 	protected void onPostExecute(List<YouTubeVideo> videosList) {
 		videoGridAdapter.appendList(videosList);
+		mProgressBar.cancel();
 	}
 
 }

@@ -1,11 +1,14 @@
 package shine.tran.localtubeview.gui.fragments;
 
 import android.app.ProgressDialog;
+import android.content.res.Configuration;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,9 +18,14 @@ import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.SpinnerAdapter;
 
+import java.io.IOException;
+
 import shine.tran.localtubeview.R;
+import shine.tran.localtubeview.businessobjects.AsyncTaskParallel;
 import shine.tran.localtubeview.businessobjects.GetFeaturedVideos;
 import shine.tran.localtubeview.businessobjects.VideoCategory;
+import shine.tran.localtubeview.businessobjects.YouTubeChannel;
+import shine.tran.localtubeview.gui.activities.MainActivity;
 import shine.tran.localtubeview.gui.businessobjects.FragmentEx;
 import shine.tran.localtubeview.gui.businessobjects.SubsAdapter;
 import shine.tran.localtubeview.gui.businessobjects.VideoGridAdapter;
@@ -40,17 +48,9 @@ public class VideosGridFragment extends FragmentEx implements ActionBar.OnNaviga
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// inflate the layout for this fragment
 		View view = inflater.inflate(R.layout.fragment_videos_grid, container, false);
-
-		mProgressBar = new ProgressDialog(VideosGridFragment.this.getActivity());
-		mProgressBar.setCancelable(true);
-		mProgressBar.setMessage("Loading.....");
-		mProgressBar.show();
 		// setup the video grid view
-		this.mGridView = (GridView) view.findViewById(R.id.grid_view);
-
-		if(mVideoGridAdapter ==null)
-			mVideoGridAdapter = new VideoGridAdapter(VideosGridFragment.this.getActivity());
-		this.mGridView.setAdapter(this.mVideoGridAdapter);
+			this.mGridView = (GridView) view.findViewById(R.id.grid_view);
+			new GetYouTubeTask().executeInParallel();
 
 		// setup the toolbar / actionbar
 		Toolbar toolbar = (Toolbar) view.findViewById(R.id.activity_main_toolbar);
@@ -75,12 +75,14 @@ public class VideosGridFragment extends FragmentEx implements ActionBar.OnNaviga
 		this.mSubsListView = (ListView) view.findViewById(R.id.subs_drawer);
 		if(mSubsAdapter ==null) mSubsAdapter = SubsAdapter.get(VideosGridFragment.this.getActivity());
 		this.mSubsListView.setAdapter(this.mSubsAdapter);
-		mProgressBar.dismiss();
-		mProgressBar.cancel();
 		return view;
 
 	}
-
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		this.mGridView.setNumColumns(getResources().getInteger(R.integer.video_grid_num_columns));
+	}
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -124,5 +126,22 @@ public class VideosGridFragment extends FragmentEx implements ActionBar.OnNaviga
 		return super.onOptionsItemSelected(item);
 		//return false;
 	}
+	private class GetYouTubeTask extends AsyncTaskParallel<Void, Void, VideoGridAdapter> {
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+		}
 
+		@Override
+		protected VideoGridAdapter doInBackground(Void ...voids) {
+			return new VideoGridAdapter(VideosGridFragment.this.getActivity());
+		}
+
+		@Override
+		protected void onPostExecute(VideoGridAdapter videoGridAdapter) {
+			mVideoGridAdapter = videoGridAdapter;
+			mGridView.setAdapter(mVideoGridAdapter);
+		}
+
+	}
 }

@@ -31,8 +31,8 @@ public class YouTubePlayer {
 			if (useOfficialYouTubePlayer(context)) {
 				launchOfficialYouTubePlayer(youTubeVideo.getId(), context);
 			} else {
-				launchOfficialYouTubePlayer(youTubeVideo.getId(), context);
-//				launchCustomYouTubePlayer(youTubeVideo, context);
+//				launchOfficialYouTubePlayer(youTubeVideo.getId(), context);
+				launchCustomYouTubePlayer(youTubeVideo, context);
 			}
 		}
 	}

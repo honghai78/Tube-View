@@ -3,282 +3,273 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\org.ocpsoft.prettytime\prettytime\4.0.1.Final\5537d74e2102a82fd937dd9b8a652e3b26026a7a\prettytime-4.0.1.Final.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="5537d74e2102a82fd937dd9b8a652e3b26026a7a">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\prettytime-4.0.1.Final_5aadb86185a2ed3b378a83a7b8851061d6613f14\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.2.1_d202d44befa39ba617636d09f688b239326c4d25\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="673d77a5bbddd766037f088e775df525c46407f0">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.android.support-support-vector-drawable-23.2.1_0d7aebca6024f9818e7d3fb9f7f4a4074f6df4bd\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.google.android.gms-play-services-base-10.2.0_d2219d787c81f30ceb81a91047e1faf7d19cace4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\org.jsoup\jsoup\1.8.3\65fd012581ded67bc20945d85c32b4598c3a9cf1\jsoup-1.8.3.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.2"
+        revision="25.0.0"
         sha1="65fd012581ded67bc20945d85c32b4598c3a9cf1">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\jsoup-1.8.3_d8c375ac44d782aecdf336c452490aa4d6a386f7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\incremental-classes\free\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="2409842feee2efd226f11b7c4dd9dd64bd16b854">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\instant-run-bootstrap_db191ff72a4d5fde3c30ea8c0555c42b4c322103\classes.dex" />
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\jsoup-1.8.3_d8c375ac44d782aecdf336c452490aa4d6a386f7\classes.dex" />
     </item>
     <item
         is-multidex="true"
         jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client\1.21.0\16a6b3c680f3bf7b81bb42790ff5c1b72c5bbedc\google-api-client-1.21.0.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.2"
+        revision="25.0.0"
         sha1="16a6b3c680f3bf7b81bb42790ff5c1b72c5bbedc">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-api-client-1.21.0_d0baff625ad7c4787ee5e75cfe333fc6f9e19875\classes.dex" />
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-api-client-1.21.0_d0baff625ad7c4787ee5e75cfe333fc6f9e19875\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.guava\guava-jdk5\17.0\463f8378feba44df7ba7cd9272d01837dad62b36\guava-jdk5-17.0.jar"
+        jar="C:\Users\hai.tran\.android\build-cache\df965f71939af58f5bd024e6085b04b218518a64\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.2"
-        sha1="463f8378feba44df7ba7cd9272d01837dad62b36">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\guava-jdk5-17.0_7913f12becfa435c7c36dd9aeb863bf96c1436aa\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.android.support-multidex-1.0.1_b9afb16c57c464f9c71a59db3c93c3d759cf69f6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client\1.21.0\42631630fe1276d4d6d6397bb07d53a4e4fec278\google-http-client-1.21.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="42631630fe1276d4d6d6397bb07d53a4e4fec278">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-http-client-1.21.0_2bcab09522f1517c7eb4bb026cc895b66f27b0f6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\jsr305-1.3.9_132ef9dd3f4adf16d3967c8e87be0676f6dc132b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\10.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="857ce7350acf811749c8fd0254d3d39b02aa71f5">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.google.android.gms-play-services-gass-10.2.0_c2b250fbdcf00ed9ad9736b74907e5e5a9684ba7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.google.android.gms-play-services-tasks-10.2.0_c9bdf5662fe6225e1a5127c7e0e3ed3a4271cdcf\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\10.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3f4483afd050f3be12db7838422309446a45daa1">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-10.2.0_242655bad7c1f5fb0defe8f96e1f5d99d2277499\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
+        revision="25.0.0"
         sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.google.android.gms-play-services-basement-10.2.0_82b1543b085dc846e69b7601c54b6955510ac023\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.android.support-appcompat-v7-23.2.1_3149ea13879d1b8169f55ccd3944cec460ca76bb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.apis\google-api-services-youtube\v3-rev164-1.21.0\24a5e3726bc236fd58bbc836b7cd2ef14127b1f4\google-api-services-youtube-v3-rev164-1.21.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="24a5e3726bc236fd58bbc836b7cd2ef14127b1f4">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-api-services-youtube-v3-rev164-1.21.0_be94c0df0687c3149491308b8326dad9c7079832\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.android.support\design\23.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="8a5238e4bdcd6568b82db669d41817de670586b8">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.android.support-design-23.0.0_90ea37fbda57ac21809db7190a1722c094925966\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\support-annotations-24.0.0_385482c52723b779dc0487f4ae3f69a5a4309883\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\org.mozilla\rhino\1.7.7\3a9ea863b86126b0ed8f2fe2230412747cd3c254\rhino-1.7.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3a9ea863b86126b0ed8f2fe2230412747cd3c254">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\rhino-1.7.7_b5ef429be35e5e63ead5560894c9534c468f950d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson2\1.21.0\8ce17bdd15fff0fd8cf359757f29e778fc7191ad\google-http-client-jackson2-1.21.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="8ce17bdd15fff0fd8cf359757f29e778fc7191ad">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-http-client-jackson2-1.21.0_1d918d229bc63287c1ff81461eb2a082eae9bcd6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\libs\YouTubeAndroidPlayerApi.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\2\YouTubeAndroidPlayerApi_f0a766928899deca1fa4a35758ab5b073514e721\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\incremental-runtime-classes\free\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="556d084ab5b5fa8a9f5afee3a7ed844b4637fd39">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\instant-run_92c6fbe1fcf066e3e812abbc706a38bfb2212940\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\internal_impl-24.0.0_11ecbf2c64e753c07461660fb4e69c6ce338abf7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-android\1.21.0\58768eec41118e917eba75ff6d5b022e01c76efc\google-http-client-android-1.21.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="58768eec41118e917eba75ff6d5b022e01c76efc">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-http-client-android-1.21.0_b25a600352fe50f5e929937de25156423358064f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.21.0\61ec42bbfc51aafde5eb8b4923c602c5b5965bc2\google-oauth-client-1.21.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="61ec42bbfc51aafde5eb8b4923c602c5b5965bc2">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-oauth-client-1.21.0_d36e1a0c0c3e1f6582c6957fa14195f400a90e4a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\10.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="aa23e4589287adb431ef59d6c78af79ab8885682">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.google.android.gms-play-services-ads-10.2.0_86097ff6954713125ab9b9b41bf03673b821e940\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.android.support-support-v4-24.0.0_f193da3b6115ac473e65277c345a87e7015c291d\classes.dex" />
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_83375accf9df15eaa2e2f8d16cc1361a0b89553d\classes.dex" />
     </item>
     <item
         is-multidex="true"
         jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.3\f6c3aed1cdfa21b5c1737c915186ea93a95a58bd\jackson-core-2.1.3.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.2"
+        revision="25.0.0"
         sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\jackson-core-2.1.3_86ba9536194ba73e9792ddb48ed9ef72a79ff12b\classes.dex" />
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\jackson-core-2.1.3_86ba9536194ba73e9792ddb48ed9ef72a79ff12b\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.github.moraisigor\slidingdrawer\1.5.5\jars\classes.jar"
+        jar="C:\Users\hai.tran\.android\build-cache\2e71899961391938d89564035559574fbd48a377\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.2"
-        sha1="d1a721585cfeb4f357c158c996a9d9f35f2e7034">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.github.moraisigor-slidingdrawer-1.5.5_11c612deb146b4dc5ad4b3853c31482fa123b24e\classes.dex" />
+        revision="25.0.0"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_ac9f82aa3f39af41346f6edd943c4364868b9cdc\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\10.2.0\jars\classes.jar"
+        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\org.ocpsoft.prettytime\prettytime\4.0.1.Final\5537d74e2102a82fd937dd9b8a652e3b26026a7a\prettytime-4.0.1.Final.jar"
         jumboMode="true"
         optimize="true"
-        revision="23.0.2"
+        revision="25.0.0"
+        sha1="5537d74e2102a82fd937dd9b8a652e3b26026a7a">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\prettytime-4.0.1.Final_5aadb86185a2ed3b378a83a7b8851061d6613f14\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\incremental-classes\free\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6640d49f880f32e4909dfabe9abd173e68171cd2">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10000\instant-run-bootstrap_5d575a58ff5faf6f447f9699fb04e8c0109f6a90\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\support-annotations-24.0.0_385482c52723b779dc0487f4ae3f69a5a4309883\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\incremental-runtime-classes\free\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10000\instant-run_7c1bf2be765e6c3bb4bfd11c63a69026fbe07247\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\jsr305-1.3.9_132ef9dd3f4adf16d3967c8e87be0676f6dc132b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\org.mozilla\rhino\1.7.7\3a9ea863b86126b0ed8f2fe2230412747cd3c254\rhino-1.7.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3a9ea863b86126b0ed8f2fe2230412747cd3c254">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\rhino-1.7.7_b5ef429be35e5e63ead5560894c9534c468f950d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.apis\google-api-services-youtube\v3-rev164-1.21.0\24a5e3726bc236fd58bbc836b7cd2ef14127b1f4\google-api-services-youtube-v3-rev164-1.21.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="24a5e3726bc236fd58bbc836b7cd2ef14127b1f4">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-api-services-youtube-v3-rev164-1.21.0_be94c0df0687c3149491308b8326dad9c7079832\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\20f6eb292e012e1a145164deb7729e0b5c0fcd45\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_c55f21d7b1a3c4bcbe997f83cdffa6ef29923de3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\f9cac0dd61f876319f7292edbef373865f69f280\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
         sha1="4ef2d91da513c4d7e773ae438fe04d0e4c135957">
-        <dex dex="C:\Users\hai.tran\Desktop\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-10.2.0_3dd4af8aeef2863064dc93e49cda2090e73fc833\classes.dex" />
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_41790c92296a0933ffd61e19e92c5782fe66ba72\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson2\1.21.0\8ce17bdd15fff0fd8cf359757f29e778fc7191ad\google-http-client-jackson2-1.21.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8ce17bdd15fff0fd8cf359757f29e778fc7191ad">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-http-client-jackson2-1.21.0_1d918d229bc63287c1ff81461eb2a082eae9bcd6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\f683364444d1327942f653538dcbce59eb363b5c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="aa23e4589287adb431ef59d6c78af79ab8885682">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_78bce2d1992410746c1a1b053475455e7ac9d1f3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\c8f77e8dc375dd213136042fe48e2e311958e155\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_da18fa3d8acb35723233354476f350935385f510\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.21.0\61ec42bbfc51aafde5eb8b4923c602c5b5965bc2\google-oauth-client-1.21.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="61ec42bbfc51aafde5eb8b4923c602c5b5965bc2">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-oauth-client-1.21.0_d36e1a0c0c3e1f6582c6957fa14195f400a90e4a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\9eabdb8f9177d8b001bf9fb279e72bd4493ea3d5\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="857ce7350acf811749c8fd0254d3d39b02aa71f5">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_c677ab6b75dee7225d9148c0323db06dd2b2a056\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-android\1.21.0\58768eec41118e917eba75ff6d5b022e01c76efc\google-http-client-android-1.21.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="58768eec41118e917eba75ff6d5b022e01c76efc">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-http-client-android-1.21.0_b25a600352fe50f5e929937de25156423358064f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\aa2e530b91ba0a7b24e74b929e5692c868d81cbb\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3f4483afd050f3be12db7838422309446a45daa1">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_66efb4c35a110a1fa96a17143e5a2b7522d5195b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\libs\YouTubeAndroidPlayerApi.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\2\YouTubeAndroidPlayerApi_7f034ed5c6b02bfe146ba04d98d29dcfc419b956\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client\1.21.0\42631630fe1276d4d6d6397bb07d53a4e4fec278\google-http-client-1.21.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="42631630fe1276d4d6d6397bb07d53a4e4fec278">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\google-http-client-1.21.0_2bcab09522f1517c7eb4bb026cc895b66f27b0f6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\ac1a8a7f3e0bcac780982f07c06b6c2d08e14ca1\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_1de01a17689a5efc443794ad199216220141a701\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\71d52696af00b1da6d4510681e44cf3f088112ed\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_445b9d38850792666daae5a4536e3ae8eac2f4d9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.gradle\caches\modules-2\files-2.1\com.google.guava\guava-jdk5\17.0\463f8378feba44df7ba7cd9272d01837dad62b36\guava-jdk5-17.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="463f8378feba44df7ba7cd9272d01837dad62b36">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\guava-jdk5-17.0_7913f12becfa435c7c36dd9aeb863bf96c1436aa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\20f6eb292e012e1a145164deb7729e0b5c0fcd45\output\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\internal_impl-24.0.0_0282763d92b2740929ba0a07e9c389f58b092041\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\f2966b434830f0d3722d97d70e78ccdc76c80e17\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_d51ea02a2795c70ae8ba990230306a4e62cf946e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\690ba7ab6c7d81ce560edde710ff98e6be0ace43\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a5238e4bdcd6568b82db669d41817de670586b8">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_ed894797ce11ec52d5effbdfdaa96f9487d772e8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\hai.tran\.android\build-cache\d4210437a81acaf8ef2b7dfe02b81819e24f3638\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d1a721585cfeb4f357c158c996a9d9f35f2e7034">
+        <dex dex="C:\Users\hai.tran\Desktop\folder\27_3\Tube-View\app\build\intermediates\transforms\dex\free\debug\folders\1000\10\classes_00fda47595fb442f32310efe2c53b17602b6a83f\classes.dex" />
     </item>
 
 </items>

@@ -89,5 +89,8 @@
 			android:text="x days ago"/>
 
 	</RelativeLayout>
-
+	<WebView
+		android:id="@+id/youtube_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
 </LinearLayout>

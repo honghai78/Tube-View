@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.github.pedrovgs.DraggableView xmlns:draggable_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/draggable_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        draggable_view:bottom_view_id="@+id/list_layout"
+        draggable_view:enable_minimized_horizontal_alpha_effect="false"
+        draggable_view:top_view_height="@dimen/_170sdp"
+        draggable_view:top_view_id="@+id/video_layout"
+        draggable_view:top_view_margin_bottom="@dimen/_5sdp"
+        draggable_view:top_view_margin_right="@dimen/_5sdp"
+        draggable_view:top_view_resize="true"
+        draggable_view:top_view_x_scale_factor="@dimen/x_scale_factor"
+        draggable_view:top_view_y_scale_factor="@dimen/y_scale_factor">
+
+
+        <!-- VideoView -->
+        <RelativeLayout
+            android:id="@+id/list_layout"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/video_layout"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+            <fragment
+                android:name="shine.tran.tubeviewmultitask.ListFragment"
+                android:id="@+id/fragment_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/video_layout"
+            android:background="@android:color/white">
+            <fragment
+                android:name="shine.tran.tubeviewmultitask.PlayerFragment"
+                android:id="@+id/my_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+    </com.github.pedrovgs.DraggableView>
+</FrameLayout>

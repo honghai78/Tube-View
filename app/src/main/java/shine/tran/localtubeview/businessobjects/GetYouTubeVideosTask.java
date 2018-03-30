@@ -2,6 +2,7 @@ package shine.tran.localtubeview.businessobjects;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.util.Log;
 
 import java.util.List;
 
@@ -27,10 +28,15 @@ public class GetYouTubeVideosTask extends AsyncTaskParallel<Void, Void, List<You
 		this.getYouTubeVideos = getYouTubeVideos;
 		this.videoGridAdapter = videoGridAdapter;
 		activity = ac;
-		mProgressBar = new ProgressDialog(activity);
-		mProgressBar.setCancelable(false);
-		mProgressBar.setMessage("Loading.....");
-		mProgressBar.show();
+		try{
+			mProgressBar = new ProgressDialog(activity);
+			mProgressBar.setCancelable(false);
+			mProgressBar.setMessage("Loading.....");
+			mProgressBar.show();
+		}
+		catch (Exception e){
+
+		}
 	}
 	@Override
 	protected List<YouTubeVideo> doInBackground(Void... params) {
@@ -46,7 +52,9 @@ public class GetYouTubeVideosTask extends AsyncTaskParallel<Void, Void, List<You
 
 	@Override
 	protected void onPostExecute(List<YouTubeVideo> videosList) {
+		Log.e("CHECK===LISTLOAD", videosList.size()+"");
 		videoGridAdapter.appendList(videosList);
+		if(mProgressBar!=null && mProgressBar.isShowing())
 		mProgressBar.cancel();
 	}
 

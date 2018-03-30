@@ -4,4 +4,9 @@
 
 	<dimen name="description_drawer_height">250dp</dimen>
 	<dimen name="comments_drawer_width">300dp</dimen>
+	<dimen name="activity_horizontal_margin">16dp</dimen>
+	<dimen name="activity_vertical_margin">16dp</dimen>
+	<dimen name="fab_margin">16dp</dimen>
+	<item name="x_scale_factor" format="float" type="dimen">2.3</item>
+	<item name="y_scale_factor" format="float" type="dimen">2.3</item>
 </resources>

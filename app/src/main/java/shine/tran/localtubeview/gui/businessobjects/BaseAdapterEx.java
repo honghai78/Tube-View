@@ -1,6 +1,7 @@
 package shine.tran.localtubeview.gui.businessobjects;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
@@ -51,6 +52,7 @@ public abstract class BaseAdapterEx<T> extends BaseAdapter {
 	 */
 	public void appendList(List<T> l) {
 		if (l != null  &&  l.size() > 0) {
+			Log.e("CHECK===LIST", l.size()+"");
 			this.list.addAll(l);
 			this.notifyDataSetChanged();
 		}

@@ -107,7 +107,7 @@ public class VideoGridAdapter extends BaseAdapterEx<YouTubeVideo> {
 
 		if (convertView == null) {
 			row = getLayoutInflater().inflate(R.layout.video_cell, parent, false);
-			viewHolder = new GridViewHolder(row);
+			viewHolder = new GridViewHolder(row, activity);
 			row.setTag(viewHolder);
 		} else {
 			row = convertView;

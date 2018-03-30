@@ -1,14 +1,27 @@
 package shine.tran.localtubeview.gui.businessobjects;
 
+import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Handler;
+import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 //import com.google.android.youtube.player.YouTubePlayer;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import shine.app.tubeviewmultitask.Constants;
+import shine.app.tubeviewmultitask.PlayerService;
 import shine.tran.localtubeview.R;
 import shine.tran.localtubeview.businessobjects.YouTubeVideo;
 import shine.tran.localtubeview.gui.activities.ChannelBrowserActivity;
@@ -27,6 +40,9 @@ public class GridViewHolder {
     private InternetImageView thumbnailImageView;
     private RelativeLayout bottomLayout;
     public static Drawable drawable = null;
+
+    Activity activity;
+    WebView youtubeView;
     /**
      * YouTube video
      */
@@ -35,7 +51,10 @@ public class GridViewHolder {
 
     private static final String TAG = GridViewHolder.class.getSimpleName();
 
-    protected GridViewHolder(View row) {
+    protected GridViewHolder(View row, Activity activity) {
+        youtubeView = (WebView) row.findViewById(R.id.youtube_view);
+        youtubeView.getSettings().setJavaScriptEnabled(true);
+        this.activity = activity;
         titleTextView = (TextView) row.findViewById(R.id.title_text_view);
         channelTextView = (TextView) row.findViewById(R.id.channel_text_view);
         thumbsUpPercentageTextView = (TextView) row.findViewById(R.id.thumbs_up_text_view);
@@ -87,7 +106,6 @@ public class GridViewHolder {
         setupChannelOnClickListener(showChannelInfo);
     }
 
-
     private void setupThumbnailOnClickListener() {
         thumbnailImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,6 +113,7 @@ public class GridViewHolder {
                 if (youTubeVideo != null) {
                     YouTubePlayerFragment.BACK_GROUND_DRAWABLE = thumbnailImageView.getDrawable();
                     YouTubePlayer.launch(youTubeVideo, context);
+
                 }
             }
         });

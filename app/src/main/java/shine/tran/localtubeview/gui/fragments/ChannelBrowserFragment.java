@@ -28,7 +28,6 @@ import shine.tran.localtubeview.gui.businessobjects.VideoGridAdapter;
 public class ChannelBrowserFragment extends FragmentEx {
 
 	private YouTubeChannel mChannel = null;
-	private GridView       mGridView;
 	private VideoGridAdapter mVideoGridAdapter;
 
 	private InternetImageView mChannelThumbnailImage = null;
@@ -43,6 +42,7 @@ public class ChannelBrowserFragment extends FragmentEx {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		final String channelId;
+		GridView       mGridView = null;
 		Bundle bundle = getActivity().getIntent().getExtras();
 
 		// we need to create a YouTubeChannel object:  this can be done by either:
@@ -86,9 +86,10 @@ public class ChannelBrowserFragment extends FragmentEx {
 		if (mVideoGridAdapter == null) {
 			mVideoGridAdapter = new VideoGridAdapter(getActivity(), false /*hide mChannel name*/);
 			mVideoGridAdapter.setVideoCategory(VideoCategory.CHANNEL_VIDEOS, channelId);
+			Log.e("CHECK============", mVideoGridAdapter.getCount() + "");
 		}
 
-		this.mGridView.setAdapter(this.mVideoGridAdapter);
+		mGridView.setAdapter(this.mVideoGridAdapter);
 
 		return fragment;
 	}

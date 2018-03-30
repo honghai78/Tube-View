@@ -9,7 +9,6 @@
         android:name="shine.tran.localtubeview.gui.fragments.ChannelBrowserFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
     <com.google.android.gms.ads.AdView
         android:id="@+id/av_banner"
         android:layout_width="wrap_content"

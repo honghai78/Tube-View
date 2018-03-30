@@ -22,7 +22,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/build/intermediates/classes/free/debug" />
     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/free/debug" />
     <exclude-output />
@@ -41,13 +41,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/freeDebug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/freeDebug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/freeDebug/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/free/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/free/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/free/debug" isTestSource="true" generated="true" />
@@ -55,6 +48,13 @@
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/free/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/free/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/free/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFreeDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/free/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/free/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/free/assets" type="java-resource" />
@@ -62,13 +62,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/free/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/free/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/free/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFree/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFree/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFree/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFree/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFree/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFree/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testFree/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestFree/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestFree/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestFree/assets" type="java-test-resource" />
@@ -76,6 +69,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestFree/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestFree/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestFree/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFree/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFree/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFree/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFree/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFree/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFree/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testFree/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
@@ -97,13 +97,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
@@ -111,11 +104,17 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dependency-cache" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-runtime-classes" />
@@ -126,7 +125,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/multi-dex" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/restart-dex" />
@@ -140,37 +138,43 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="google-http-client-android-1.21.0" level="project" />
-    <orderEntry type="library" exported="" name="jsoup-1.8.3" level="project" />
-    <orderEntry type="library" exported="" name="prettytime-4.0.1.Final" level="project" />
-    <orderEntry type="library" exported="" name="guava-jdk5-17.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-tasks-10.2.0" level="project" />
-    <orderEntry type="library" exported="" name="rhino-1.7.7" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-24.0.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-base-10.2.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-gass-10.2.0" level="project" />
-    <orderEntry type="library" exported="" name="google-oauth-client-1.21.0" level="project" />
-    <orderEntry type="library" exported="" name="jsr305-1.3.9" level="project" />
-    <orderEntry type="library" exported="" name="play-services-clearcut-10.2.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-ads-lite-10.2.0" level="project" />
-    <orderEntry type="library" exported="" name="slidingdrawer-1.5.5" level="project" />
-    <orderEntry type="library" exported="" name="animated-vector-drawable-23.2.1" level="project" />
-    <orderEntry type="library" exported="" name="support-vector-drawable-23.2.1" level="project" />
-    <orderEntry type="library" exported="" name="appcompat-v7-23.2.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="play-services-ads-10.2.0" level="project" />
-    <orderEntry type="library" exported="" name="google-api-client-1.21.0" level="project" />
-    <orderEntry type="library" exported="" name="google-http-client-jackson2-1.21.0" level="project" />
-    <orderEntry type="library" exported="" name="YouTubeAndroidPlayerApi" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-24.0.0" level="project" />
-    <orderEntry type="library" exported="" name="jackson-core-2.1.3" level="project" />
-    <orderEntry type="library" exported="" name="design-23.0.0" level="project" />
-    <orderEntry type="library" exported="" name="play-services-basement-10.2.0" level="project" />
-    <orderEntry type="library" exported="" name="multidex-1.0.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="hamcrest-core-1.3" level="project" />
-    <orderEntry type="library" exported="" name="google-http-client-1.21.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
-    <orderEntry type="library" exported="" name="google-api-services-youtube-v3-rev164-1.21.0" level="project" />
-    <orderEntry type="library" exported="" name="android-android-23" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-base-10.2.0" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:multidex-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.oauth-client:google-oauth-client:1.21.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.http-client:google-http-client-android:1.21.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-clearcut-10.2.0" level="project" />
+    <orderEntry type="library" exported="" name="com.github.pedrovgs:draggablepanel-1.9" level="project" />
+    <orderEntry type="library" exported="" name="org.jsoup:jsoup:1.8.3@jar" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="junit:junit:4.12@jar" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="com.android.support:multidex-instrumentation-1.0.1" level="project" />
+    <orderEntry type="library" exported="" name="com.github.moraisigor:slidingdrawer-1.5.5" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:animated-vector-drawable-23.2.1" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:appcompat-v7-23.2.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.api-client:google-api-client:1.21.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.guava:guava-jdk5:17.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-gass-10.2.0" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-v4-24.0.0" level="project" />
+    <orderEntry type="library" exported="" name="com.intuit.sdp:sdp-android-1.0.4" level="project" />
+    <orderEntry type="library" exported="" name="com.nineoldandroids:library:2.4.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.jakewharton:butterknife-annotations:8.5.1@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-annotations:25.1.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="eu.the4thfloor.volley:com.android.volley:2015.05.28@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-ads-lite-10.2.0" level="project" />
+    <orderEntry type="library" exported="" name="com.google.http-client:google-http-client-jackson2:1.21.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="__local_jars__:/Users/haitran/Tube-View/app/libs/YouTubeAndroidPlayerApi.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-vector-drawable-23.2.1" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-ads-10.2.0" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="org.hamcrest:hamcrest-core:1.3@jar" level="project" />
+    <orderEntry type="library" exported="" name="org.ocpsoft.prettytime:prettytime:4.0.1.Final@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-basement-10.2.0" level="project" />
+    <orderEntry type="library" exported="" name="com.google.android.gms:play-services-tasks-10.2.0" level="project" />
+    <orderEntry type="library" exported="" name="com.jakewharton:butterknife-8.5.1" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:support-compat-25.1.0" level="project" />
+    <orderEntry type="library" exported="" name="com.android.support:design-23.0.0" level="project" />
+    <orderEntry type="library" exported="" name="com.google.code.findbugs:jsr305:1.3.9@jar" level="project" />
+    <orderEntry type="library" exported="" name="org.mozilla:rhino:1.7.7@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.apis:google-api-services-youtube:v3-rev164-1.21.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.google.http-client:google-http-client:1.21.0@jar" level="project" />
+    <orderEntry type="library" exported="" name="com.fasterxml.jackson.core:jackson-core:2.1.3@jar" level="project" />
   </component>
 </module>

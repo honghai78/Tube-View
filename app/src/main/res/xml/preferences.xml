@@ -47,7 +47,7 @@
             android:title="@string/pref_title_preferred_res"
             />
         <CheckBoxPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="@string/pref_key_use_offical_player"
             android:summary="@string/pref_summary_use_offical_player"
             android:title="@string/pref_title_use_offical_player" />
